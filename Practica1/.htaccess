@@ -1,0 +1,14 @@
+RewriteEngine On
+DirectoryIndex index.php
+
+
+
+<ifModule mod_rewrite.c>
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^index/(.*)/(.*)/(.*)$ index.php?op=$1&a=$2&b=$3&rule=operaciones [NC,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^index/(.*) index.php?op=$1&rule=1 [NC,L]
+</ifModule>
