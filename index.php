@@ -17,7 +17,7 @@ function printArray($data){
 	array_shift($uritmp);
 	$uritmp = array_values($uritmp);
 	//printArray($uritmp);
-	$uri = str_replace("/Practica","",$uri);
+	$uri = str_replace("/ludecoraciones","",$uri);
 	if($uritmp[0] == ""){
 		$section = "index";
 	}else{
