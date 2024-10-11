@@ -30,21 +30,7 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-<div>     
-  <?php
-      //include (dirname(__DIR__).'\\libraries\\Database.php');
-      $db = NEW Database;
-      $sql="SELECT * FROM productos";
-      $params = [];
-      $productos = $db->SelectSql($sql,$params);
-      foreach($productos as $key => $producto){
-        ?>  
-        <div class="carousel-item">
-          <img src="<?php echo URL.'/images/'.$productos["IDProducto"]."/".$productos["Imagen"]?>" alt="">
-        </div>
-        <?php
-      }
-      ?>
+
     </div>
 </body>
 </html>
