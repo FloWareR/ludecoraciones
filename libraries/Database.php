@@ -53,5 +53,26 @@ class Database {
         } 
         return $mix;
     }
+    function InsertSql($sql, $params = []){
+        $mix = [];
+
+        try{
+            $query = $this->pdo->prepare($sql);
+            $data = $query->execute($params);
+
+            $this->totalrows = $query->rowCount();
+
+            $lastInsertId = $this->pdo->lastInsertId();
+
+            $mix['success'] = true;
+            $mix['lastInsertId'] = $lastInsertId;
+            $mix['affectedRows'] = $this->totalrows;
+        }catch(PDOException $e){
+            $mix['success'] = false;
+            $mix['error'] = $e->getMessage();
+        }
+
+        return $mix;
+    }
 }
 ?>

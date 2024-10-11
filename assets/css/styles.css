@@ -1,0 +1,156 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #6e6b6b;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.navbar {
+    background-color: #ffffffe8;
+    padding: 10px;
+    text-align: left;
+}
+
+.logo img {
+    max-width: 150px;
+}
+
+/* Contenedor principal */
+.container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Título y subtítulo */
+.title {
+    font-size: 36px;
+    color: #7eb8ff;
+    text-align: left;
+}
+
+.subtitle {
+    font-size: 24px;
+    color: #b8c4ff;
+    text-align: left;
+}
+
+/* Contenedor para hero y formulario */
+.hero-form-container {
+    display: flex;
+    justify-content: center; /* Centra ambos elementos */
+    align-items: center;     /* Centra verticalmente */
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.hero-section {
+    flex: 2;
+    text-align: center;
+}
+
+.hero-image img {
+    max-width: 50%;
+    height: auto;
+}
+
+.form-section {
+    flex: 1;
+    display: flex;
+    justify-content: center; 
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    background-color: #7eb8ff;
+    border-radius: 40px;
+    padding: 30px; 
+    width: 600px; /* Limita el ancho del formulario */
+}
+
+form label {
+    margin-bottom: 10px;
+    text-align: left; /* Alinea las etiquetas a la izquierda */
+}
+
+form input, form textarea {
+    padding: 15px; /* Más espacio interno en los campos */
+    margin-bottom: 20px; /* Reduce el espacio entre los campos */
+    border-radius: 25px; /* Bordes menos redondeados */
+    border: 1px solid #ccc;
+}
+
+/* Botón de acción */
+.cta-button {
+    background-color: #ff6b81;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 16px;
+}
+
+.benefits-section {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+}
+
+.benefit {
+    background-color: #def7ff;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    width: 30%;
+}
+
+/* Comentarios de usuarios */
+.comments-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.comment-card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    width: 45%;
+    text-align: center;
+}
+
+.comment-card img {
+    max-width: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #c194dbcb;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 1024px) {
+    .hero-form-container {
+        flex-direction: column;  /* Cambiar a columna en pantallas pequeñas */
+        align-items: center;
+    }
+
+    .benefits-section, .comments-section {
+        flex-direction: column;
+    }
+
+    .benefit, .comment-card {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
