@@ -10,7 +10,7 @@ class Database {
     private $pass;
     private $charset;
     private $pdo;
-
+    private $totalrows;
     public function __construct($charset = 'utf8') {
 
         $this->host = DB_CONFIG["default"]["DB_HOST"] ;
@@ -18,7 +18,6 @@ class Database {
         $this->user = DB_CONFIG["default"]["DB_USER"];
         $this->pass = DB_CONFIG["default"]["DB_PASS"];
         $this->charset = $charset;
-
         $this->connect();
     }
 
@@ -51,6 +50,24 @@ class Database {
         } else if ( $data and $query->rowCount() >= 1) {
             $mix = $query->fetchAll(PDO::FETCH_ASSOC);
         } 
+        return $mix;
+    }
+    function querySQL($sql, $params = []){
+        $mix = [];
+
+        try{
+            $query = $this->pdo->prepare($sql);
+            $data = $query->execute($params);
+            $this->totalrows = $query->rowCount();  
+            $lastInsertId = $this->pdo->lastInsertId();
+            $mix["success"] = true;
+            $mix['lastInsertId'] = $lastInsertId;
+            $mix['affectedRows'] = $this->totalrows;
+        }catch(PDOException $e){
+            $mix['success'] = false;
+            $mix['error'] = $e->getMessage();
+        }
+
         return $mix;
     }
 }
