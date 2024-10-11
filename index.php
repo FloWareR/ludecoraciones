@@ -10,7 +10,7 @@ function printArray($data){
 	include("config/autoload.php");
 
 	$uri = $_SERVER["REQUEST_URI"];
-	$uri = str_replace("/practica1",'',$uri);
+	$uri = str_replace("/ludecoraciones",'',$uri);
 	if ($uri == "/"){
 		$uri = "";
 	}
