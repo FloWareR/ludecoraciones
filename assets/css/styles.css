@@ -1,8 +1,7 @@
-/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    color: #6e6b6b;
+    background-color: #ffffff;
+    color: #534f4f;
     padding-left: 2%;
     padding-right: 2%;
 }
@@ -17,14 +16,13 @@ body {
     max-width: 150px;
 }
 
-/* Contenedor principal */
 .container {
-    padding: 20px;
+    padding: 20px; 
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Título y subtítulo */
+
 .title {
     font-size: 36px;
     color: #7eb8ff;
@@ -37,11 +35,10 @@ body {
     text-align: left;
 }
 
-/* Contenedor para hero y formulario */
 .hero-form-container {
     display: flex;
-    justify-content: center; /* Centra ambos elementos */
-    align-items: center;     /* Centra verticalmente */
+    justify-content: center; 
+    align-items: center;     
     gap: 30px;
     margin-bottom: 60px;
 }
@@ -67,23 +64,23 @@ form {
     flex-direction: column;
     background-color: #7eb8ff;
     border-radius: 40px;
-    padding: 30px; 
-    width: 600px; /* Limita el ancho del formulario */
+    padding: 40px; 
+    width: 600px; 
 }
 
 form label {
     margin-bottom: 10px;
-    text-align: left; /* Alinea las etiquetas a la izquierda */
+    text-align: left; 
 }
 
 form input, form textarea {
-    padding: 15px; /* Más espacio interno en los campos */
-    margin-bottom: 20px; /* Reduce el espacio entre los campos */
-    border-radius: 25px; /* Bordes menos redondeados */
+    padding: 15px; 
+    margin-bottom: 20px;
+    border-radius: 25px; 
     border: 1px solid #ccc;
+    
 }
 
-/* Botón de acción */
 .cta-button {
     background-color: #ff6b81;
     color: white;
@@ -108,11 +105,12 @@ form input, form textarea {
     width: 30%;
 }
 
-/* Comentarios de usuarios */
 .comments-section {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between ;
     margin-bottom: 30px;
+    margin-left: 200px;
+    margin-right: 200px;
 }
 
 .comment-card {
@@ -120,7 +118,7 @@ form input, form textarea {
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 15px;
-    width: 45%;
+    width: 20%;
     text-align: center;
 }
 
@@ -129,8 +127,22 @@ form input, form textarea {
     border-radius: 50%;
     margin-bottom: 10px;
 }
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 10px; 
+    max-width: 1000px;
+    margin: 0 auto; 
+}
 
-/* Footer */
+.image-gallery img {
+    aspect-ratio: 1 / 1; 
+    object-fit: cover; 
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 2); 
+    
+}
+
 footer {
     background-color: #c194dbcb;
     color: white;
@@ -138,19 +150,80 @@ footer {
     text-align: center;
 }
 
-/* Media query para pantallas pequeñas */
+@media (min-width: 1600px) {
+    .hero-form-container {
+        gap: 40px;
+    }
+    .hero-section img {
+        max-width: 60%;
+    }
+}
+
+@media (max-width: 1366px) {
+    .hero-form-container {
+        flex-direction: row;
+        gap: 20px;
+    }
+    .hero-section img {
+        max-width: 50%;
+    }
+}
+
 @media (max-width: 1024px) {
     .hero-form-container {
-        flex-direction: column;  /* Cambiar a columna en pantallas pequeñas */
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero-section img {
+        max-width: 70%;
+    }
+}
+
+@media (max-width: 736px) {
+    .hero-form-container {
+        flex-direction: column;
         align-items: center;
     }
 
-    .benefits-section, .comments-section {
-        flex-direction: column;
+    .hero-section img {
+        max-width: 80%;
     }
 
-    .benefit, .comment-card {
+    .form-section {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    form input, form textarea {
         width: 100%;
-        margin-bottom: 10px;
+        padding: 12px;
+    }
+
+    .cta-button {
+        padding: 12px;
+    }
+
+}
+
+@media (max-width: 640px) {
+    .hero-form-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-section img {
+        max-width: 85%;
+    }
+
+    .form-section {
+        width: 90%;
+    }
+
+    form input, form textarea {
+        padding: 15px;
+    }
+
+    .cta-button {
+        padding: 15px;
     }
 }

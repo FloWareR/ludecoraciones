@@ -1,10 +1,18 @@
 <div class="hero-form-container">
     <div class="hero-section">
         <h1 class="title">LU decoraciones</h1>
-        <h2 class="subtitle">Cotizar</h2>
-        <div class="hero-image">
-            <img src="assets/images/hero.jpg" alt="Hero Shot">
-        </div>
+        <h2 class="subtitle">Cotizaciones</h2>
+            <div class="image-gallery">
+                <img src="assets/images/img1.jpeg" alt="Imagen 1">
+                <img src="assets/images/img2.jpeg" alt="Imagen 2">
+                <img src="assets/images/img3.jpeg" alt="Imagen 3">
+                <img src="assets/images/img4.jpeg" alt="Imagen 4">
+                <img src="assets/images/img5.jpeg" alt="Imagen 5">
+                <img src="assets/images/img6.jpeg" alt="Imagen 6">
+                <img src="assets/images/img7.jpeg" alt="Imagen 7">
+                <img src="assets/images/img8.jpeg" alt="Imagen 8">
+                <img src="assets/images/img9.jpeg" alt="Imagen 9">
+            </div>
     </div>
 
     <div class="form-section">
@@ -30,11 +38,11 @@
 
 <div class="comments-section">
     <div class="comment-card">
-        <img src="assets/images/user1.jpg" alt="Foto de perfil">
-        <p>“Este es mi producto favorito”</p>
+        <img src="assets/images/pfp.png" alt="Foto de perfil">
+        <p>“Mis decoraciones favoritos”</p>
     </div>
     <div class="comment-card">
-        <img src="assets/images/user2.jpg" alt="Foto de perfil">
-        <p>“¡Me encanta!”</p>
+        <img src="assets/images/pfp.png" alt="Foto de perfil">
+        <p>“3B bueno bonito y barato”</p>
     </div>
 </div>
