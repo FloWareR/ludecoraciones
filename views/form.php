@@ -33,7 +33,7 @@
 <div class="benefits-section">
     <div class="benefit">Decoraciones personalizadas</div>
     <div class="benefit">Excelente calidad y precio</div>
-    <div class="benefit">Increible </div>
+    <div class="benefit">Increible para tus eventos</div>
 </div>
 
 <div class="comments-section">
