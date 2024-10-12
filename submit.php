@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $result = $db->InsertSql($sql, $params);
         
         if ($result['success']) {
-            echo "<p style='color: green;'>¡Gracias por tu envío! ID del registro: " . $name . "</p>";
+            echo "<p style='color: green;'>¡Gracias por tu envío " . $name . "!</p>";
         } else {
             echo "<p style='color: red;'>Error al procesar la solicitud: " . $result['error'] . "</p>";
         }
