@@ -10,8 +10,8 @@ define("SOURCE",APPLICATION);
 
 $dbconfig = array();
   $dbconfig["default"]["DB_TYPE"] = "mysql";
-  $dbconfig["default"]["DB_HOST"] = "localhost";
-  $dbconfig["default"]["DB_NAME"] = "test";
+  $dbconfig["default"]["DB_HOST"] = "ludecoraciones.com";
+  $dbconfig["default"]["DB_NAME"] = "u170629521_LuDecoraciones";
   $dbconfig["default"]["DB_USER"] = "u170629521_Refered";
   $dbconfig["default"]["DB_PASS"] = "";
 
