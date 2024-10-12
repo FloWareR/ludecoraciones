@@ -13,7 +13,7 @@ $dbconfig = array();
   $dbconfig["default"]["DB_HOST"] = "ludecoraciones.com";
   $dbconfig["default"]["DB_NAME"] = "u170629521_LuDecoraciones";
   $dbconfig["default"]["DB_USER"] = "u170629521_Refered";
-  $dbconfig["default"]["DB_PASS"] = "";
+  $dbconfig["default"]["DB_PASS"] = "Refered2707";
 
   define("DB_CONFIG", $dbconfig);
   define("CHARSET","utf8");
