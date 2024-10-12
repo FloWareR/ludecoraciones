@@ -31,9 +31,9 @@
     </div>
 </div>
 <div class="benefits-section">
-    <div class="benefit">Beneficio 1</div>
-    <div class="benefit">Beneficio 2</div>
-    <div class="benefit">Beneficio 3</div>
+    <div class="benefit">Decoraciones personalizadas</div>
+    <div class="benefit">Excelente calidad y precio</div>
+    <div class="benefit">Increible </div>
 </div>
 
 <div class="comments-section">
