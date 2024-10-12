@@ -12,7 +12,7 @@ $dbconfig = array();
   $dbconfig["default"]["DB_TYPE"] = "mysql";
   $dbconfig["default"]["DB_HOST"] = "localhost";
   $dbconfig["default"]["DB_NAME"] = "test";
-  $dbconfig["default"]["DB_USER"] = "root";
+  $dbconfig["default"]["DB_USER"] = "u170629521_Refered";
   $dbconfig["default"]["DB_PASS"] = "";
 
   define("DB_CONFIG", $dbconfig);
