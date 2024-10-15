@@ -6,8 +6,8 @@ $databs = mysqli_select_db($conectar, 'u170629521_flutter')
 
 if($conectar){
     echo 'bien';
+    echo $databs;
 }
-if($databs){
-    echo 'bien base';
-}
+
+
 ?>
