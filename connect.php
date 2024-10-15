@@ -9,6 +9,6 @@ if($conectar){
     echo 'bien';
 }
 if($bd){
-    echo 'bien base'
+    echo 'bien base';
 }
 ?>
