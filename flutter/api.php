@@ -2,7 +2,7 @@
 header("Content-Type: application/json");
 
 // Configuración de conexión a la base de datos
-$servername = "localhost";
+$servername = "ludecoraciones.com";
 $username = "u170629521_ReferedFlutter";
 $password = "Refered1234";
 $dbname = "u170629521_flutter";
