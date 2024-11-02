@@ -4,7 +4,7 @@ include 'db_config.php';
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $usuario = $_POST['usuario'];
     $correo = $_POST['correo'];
-    $contrasena = password_hash($_POST['contrasena'], PASSWORD_DEFAULT);  // Encripta la contraseña
+    $contrasena = password_hash($_POST['contrasena'], PASSWORD_DEFAULT); 
     $telefono = $_POST['telefono'];
     $edad = $_POST['edad'];
 
@@ -20,4 +20,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->close();
     $conn->close();
 }
+echo($usuario);
 ?>
