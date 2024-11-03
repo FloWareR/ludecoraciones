@@ -102,13 +102,15 @@ if ($data['action'] === 'register') {
     }
 
 } elseif ($data['action'] === 'update_profile') {
-    if (isset($data['current_email'], $data['new_email'], $data['new_password'], $data['new_phone'], $data['new_age'])) {
+    // Actualización de perfil incluyendo el campo "usuario"
+    if (isset($data['current_email'], $data['new_email'], $data['new_password'], $data['new_phone'], $data['new_age'], $data['new_usuario'])) {
         $hashedPassword = password_hash($data['new_password'], PASSWORD_BCRYPT);
-        $sql = "UPDATE usuarios SET correo = :new_email, contrasena = :new_password, telefono = :new_phone, edad = :new_age WHERE correo = :current_email";
+        $sql = "UPDATE usuarios SET usuario = :new_usuario, correo = :new_email, contrasena = :new_password, telefono = :new_phone, edad = :new_age WHERE correo = :current_email";
         $stmt = $pdo->prepare($sql);
 
         try {
             $stmt->execute([
+                ':new_usuario' => $data['new_usuario'],
                 ':new_email' => $data['new_email'],
                 ':new_password' => $hashedPassword,
                 ':new_phone' => $data['new_phone'],
