@@ -87,3 +87,12 @@ if (isset($data['action'])) {
                 echo json_encode(["success" => false, "error" => "Error al registrar el pago: " . $e->getMessage()]);
             }
         } else {
+            echo json_encode(["error" => "Faltan datos obligatorios para el pago"]);
+        }
+    } else {
+        echo json_encode(["error" => "Acción no válida"]);
+    }
+} else {
+    echo json_encode(["error" => "Acción no definida"]);
+}
+?>
