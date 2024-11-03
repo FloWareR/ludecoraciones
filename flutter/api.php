@@ -95,4 +95,52 @@ if (isset($data['action'])) {
 } else {
     echo json_encode(["error" => "Acción no definida"]);
 }
+try {
+    $pdo = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    echo json_encode(["error" => "Error en la conexión: " . $e->getMessage()]);
+    exit();
+}
+
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    echo json_encode(["error" => "Método no permitido"]);
+    exit();
+}
+
+$data = json_decode(file_get_contents("php://input"), true);
+
+if ($data === null) {
+    echo json_encode(["error" => "Error al decodificar JSON"]);
+    exit();
+}
+
+if (isset($data['action'])) {
+    if ($data['action'] === 'update_profile') {
+        if (isset($data['current_email'], $data['new_email'], $data['new_password'], $data['new_phone'], $data['new_age'])) {
+            $hashedPassword = password_hash($data['new_password'], PASSWORD_BCRYPT);
+            $sql = "UPDATE usuarios SET correo = :new_email, contrasena = :new_password, telefono = :new_phone, edad = :new_age WHERE correo = :current_email";
+            $stmt = $pdo->prepare($sql);
+
+            try {
+                $stmt->execute([
+                    ':new_email' => $data['new_email'],
+                    ':new_password' => $hashedPassword,
+                    ':new_phone' => $data['new_phone'],
+                    ':new_age' => $data['new_age'],
+                    ':current_email' => $data['current_email']
+                ]);
+                echo json_encode(["success" => true, "message" => "Perfil actualizado correctamente."]);
+            } catch (PDOException $e) {
+                echo json_encode(["success" => false, "error" => "Error al actualizar el perfil: " . $e->getMessage()]);
+            }
+        } else {
+            echo json_encode(["error" => "Faltan datos obligatorios para la actualización del perfil"]);
+        }
+    } else {
+        echo json_encode(["error" => "Acción no válida"]);
+    }
+} else {
+    echo json_encode(["error" => "Acción no definida"]);
+}
 ?>
