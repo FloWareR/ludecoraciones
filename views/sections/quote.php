@@ -8,7 +8,7 @@
 </head>
 <script>
 function abrirW() {
-    const telefono = '9931602365';
+    const telefono = '9932901320';
     
     // Obtener los valores de los campos del formulario
     const nombre = document.getElementById('nombre').value;
