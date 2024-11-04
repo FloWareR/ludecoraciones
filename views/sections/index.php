@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
-    <link rel="stylesheet" href="assets/css/styles.css"> <!-- Aquí se incluye el CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css"> 
 </head>
 <body>
 
-<?php 
-include("views/header.php");
-include("views/form.php");
-include("views/footer.php");
-
+<?php
+include(DOCUMENT_ROOT . "/views/header.php");
+include(DOCUMENT_ROOT . "/views/sections/home.php");
+include(DOCUMENT_ROOT . "/views/footer.php");
 ?>
+
 </body>
 </html>

@@ -1,6 +1,6 @@
 <?php
-include('config/config.php'); 
-include_once('libraries/Database.php'); 
+include('../../config/config.php'); 
+include_once('../../libraries/Database.php'); 
 
 $db = new Database();
 
@@ -22,6 +22,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         
         if ($result['success']) {
             echo "<p style='color: green;'>¡Gracias por tu envío " . $name . "!</p>";
+            echo "<script>
+                    setTimeout(function() {
+                        window.location.href = '/Proyecto';
+                    }, 3000); // 3000 ms = 3 segundos
+                  </script>";
         } else {
             echo "<p style='color: red;'>Error al procesar la solicitud: " . $result['error'] . "</p>";
         }

@@ -1,25 +1,83 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #ffffff;
-    color: #534f4f;
-    padding-left: 2%;
-    padding-right: 2%;
+@font-face {
+    font-family: 'Itim';
+    src: url('/Proyecto/assets/fonts/Itim-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
+body {
+    font-family: 'Itim', Arial, sans-serif; 
+    background-color: #ffffff;
+    color: #534f4f;
+    margin: 0; /* Quita los márgenes del cuerpo */
+}
+
+main {
+    padding: 0 2%; /* Mantiene el padding en el contenido */
+}
+
+/* Footer pegado al fondo y con margen superior */
+footer {
+    background-color: #c194dbcb;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%; /* Ocupa todo el ancho */
+    margin-top: 60px; /* Añade separación con el contenido superior */
+    position: relative;
+    left: 0;
+}
+
+h1{
+
+    color: #b954d8;
+
+}
 .navbar {
-    background-color: #ffffffe8;
-    padding: 10px;
-    text-align: left;
+    background-color: #ffffff; 
+    padding: 10px 20px; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
 }
 
 .logo img {
     max-width: 150px;
 }
 
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px; 
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #534f4f;
+    padding: 15px 25px; 
+    border-radius: 20px; 
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+}
+
+.nav-links a:hover {
+    background-color: rgba(255, 182, 193, 0.7); /* Rosa pastel semi opaco */
+    color: white;
+    transform: scale(1.05); /* Aumenta el tamaño del botón ligeramente al hacer hover */
+}
+
+.logo img {
+    max-width: 200px;
+}
+
 .container {
     padding: 20px; 
     max-width: 1200px;
     margin: 0 auto;
+    background-color: blueviolet;
 }
 
 
@@ -43,10 +101,6 @@ body {
     margin-bottom: 60px;
 }
 
-.hero-section {
-    flex: 2;
-    text-align: center;
-}
 
 .hero-image img {
     max-width: 50%;
@@ -142,12 +196,119 @@ form input, form textarea {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 2); 
     
 }
+#about {
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-footer {
-    background-color: #c194dbcb;
-    color: white;
-    padding: 10px;
-    text-align: center;
+#about img {
+    width: 300px;
+    margin-left: 20px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+#about h2 {
+    font-family: 'Georgia', serif;
+    color: #4b4b4b;
+    font-size: 36px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+    max-width: 600px;
+    text-align: justify
+}
+
+.about-text {
+    flex: 2;
+    padding-right: 20px;
+}
+
+.about-image {
+    flex: 1;
+}
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 500px; 
+    padding: 40px 0; 
+    overflow: hidden;
+}
+
+
+.carousel {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 50px;
+}
+
+/* Bordes curvos y animación de transición para las imágenes */
+.carousel-image {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.carousel-image img {
+    width: 300px;
+    height: auto;
+    display: block;
+    border-radius: 20px; /* Bordes curvos */
+}
+
+/* Estilo principal para la imagen en el centro */
+.main-image {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+    position: relative;
+}
+
+/* Opacidad y escala reducida para las imágenes laterales */
+.previous-image, .next-image {
+    opacity: 0.3;
+    transform: scale(0.9);
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* Estilos del botón */
+.carousel-button {
+    position: absolute;
+    bottom: -40px; /* Coloca el botón debajo de la imagen */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #b954d8;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-button:hover {
+    background-color: #a943c3;
+}
+
+.carousel-image.active {
+    opacity: 1;
+    transform: scale(1.1);
+    z-index: 2;
 }
 
 @media (min-width: 1600px) {

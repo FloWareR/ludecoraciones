@@ -1,7 +1,17 @@
-<body>
-    
 <header class="navbar">
-        <div class="logo">
-            <img src="assets/images/logo.png" alt="Logo de la empresa">
-        </div>
-    </header>
+    
+    <div class="logo">
+        <img src="/Proyecto/assets/images/logo.png" alt="Logo de LU Decoraciones">
+    </div>
+    <div>
+        <h1>LuDecoraciones</h1>
+    </div>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="/Proyecto">Inicio</a></li>
+            <li><a href="/Proyecto/views/sections/proyects.php">Proyectos</a></li>
+            <li><a href="/Proyecto/views/sections/quote.php">Cotizar</a></li>
+            <li><a href="/Proyecto/views/sections/about.php">Conoce LU</a></li> 
+        </ul>
+    </nav>
+</header>
