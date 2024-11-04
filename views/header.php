@@ -8,10 +8,10 @@
     </div>
     <nav>
         <ul class="nav-links">
-            <li><a href="/LUDECORACIONES">Inicio</a></li>
-            <li><a href="/LUDECORACIONES/views/sections/proyects.php">Proyectos</a></li>
-            <li><a href="/LUDECORACIONES/views/sections/quote.php">Cotizar</a></li>
-            <li><a href="/LUDECORACIONES/views/sections/about.php">Conoce LU</a></li> 
+            <li><a href="/ludecoraciones">Inicio</a></li>
+            <li><a href="/ludecoraciones/views/sections/proyects.php">Proyectos</a></li>
+            <li><a href="/ludecoraciones/views/sections/quote.php">Cotizar</a></li>
+            <li><a href="/ludecoraciones/views/sections/about.php">Conoce LU</a></li> 
         </ul>
     </nav>
 </header>
