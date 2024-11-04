@@ -9,8 +9,8 @@ body {
     font-family: 'Itim', Arial, sans-serif; 
     background-color: #ffffff;
     color: #534f4f;
+    margin: 0; /* Quita los márgenes del cuerpo */
 }
-
 main {
     padding: 0 2%; /* Mantiene el padding en el contenido */
 }
