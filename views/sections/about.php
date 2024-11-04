@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../../assets/css/styles.css"> 
 </head>
 <body>
-    <?php include($_SERVER['DOCUMENT_ROOT'] . '/Proyecto/views/header.php'); ?>
+    <?php include($_SERVER['DOCUMENT_ROOT'] . '/views/header.php'); ?>
 
     <main>
         <section id="about">
@@ -25,6 +25,6 @@ A lo largo de su carrera, Lupita ha trabajado en todo tipo de eventos, incluyend
             </div>
         </section>
     </main>
-    <?php include($_SERVER['DOCUMENT_ROOT'] . '/Proyecto/views/footer.php'); ?>
+    <?php include($_SERVER['DOCUMENT_ROOT'] . '/views/footer.php'); ?>
 </body>
 </html>
