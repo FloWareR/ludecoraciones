@@ -84,8 +84,8 @@ if ($data['action'] === 'register') {
         $pdo->beginTransaction();
         try {
             // Registro del pago
-            $sql = "INSERT INTO payments (usuario, correo, tarjeta, vencimiento, cvv, product_id) 
-                    VALUES (:usuario, :correo, :tarjeta, :vencimiento, :cvv, :product_id)";
+            $sql = "INSERT INTO payments (usuario, correo, tarjeta, vencimiento, cvv, disponible) 
+                    VALUES (:usuario, :correo, :tarjeta, :vencimiento, :cvv, :disponible)";
             $stmt = $pdo->prepare($sql);
             $stmt->execute([
                 ':usuario' => $data['usuario'],
@@ -93,7 +93,7 @@ if ($data['action'] === 'register') {
                 ':tarjeta' => $data['tarjeta'],
                 ':vencimiento' => $data['vencimiento'],
                 ':cvv' => $data['cvv'],
-                ':product_id' => $data['product_id']
+                ':disponible' => $data['disponible']
             ]);
 
             // Actualizar estado del producto a 'apartado'
