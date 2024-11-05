@@ -79,23 +79,33 @@ if ($data['action'] === 'register') {
         echo json_encode(["error" => "Faltan datos para el inicio de sesión"]);
     }
 
-} elseif ($data['action'] === 'payment') {
-    if (isset($data['usuario'], $data['correo'], $data['tarjeta'], $data['vencimiento'], $data['cvv'])) {
-        $sql = "INSERT INTO payments (usuario, correo, tarjeta, vencimiento, cvv) 
-                VALUES (:usuario, :correo, :tarjeta, :vencimiento, :cvv)";
-        $stmt = $pdo->prepare($sql);
-
+} } elseif ($data['action'] === 'payment') {
+    if (isset($data['usuario'], $data['correo'], $data['tarjeta'], $data['vencimiento'], $data['cvv'], $data['product_id'])) {
+        $pdo->beginTransaction();
         try {
+            // Registro del pago
+            $sql = "INSERT INTO payments (usuario, correo, tarjeta, vencimiento, cvv, product_id) 
+                    VALUES (:usuario, :correo, :tarjeta, :vencimiento, :cvv, :product_id)";
+            $stmt = $pdo->prepare($sql);
             $stmt->execute([
                 ':usuario' => $data['usuario'],
                 ':correo' => $data['correo'],
                 ':tarjeta' => $data['tarjeta'],
                 ':vencimiento' => $data['vencimiento'],
-                ':cvv' => $data['cvv']
+                ':cvv' => $data['cvv'],
+                ':product_id' => $data['product_id']
             ]);
-            echo json_encode(["success" => true, "message" => "Pago registrado correctamente."]);
+
+            // Actualizar estado del producto a 'apartado'
+            $updateSql = "UPDATE products SET status = 'apartado' WHERE id = :product_id";
+            $updateStmt = $pdo->prepare($updateSql);
+            $updateStmt->execute([':product_id' => $data['product_id']]);
+
+            $pdo->commit();
+            echo json_encode(["success" => true, "message" => "Pago registrado correctamente y producto apartado."]);
         } catch (PDOException $e) {
-            echo json_encode(["success" => false, "error" => "Error al registrar el pago: " . $e->getMessage()]);
+            $pdo->rollBack();
+            echo json_encode(["success" => false, "error" => "Error al registrar el pago o actualizar el estado del producto: " . $e->getMessage()]);
         }
     } else {
         echo json_encode(["error" => "Faltan datos obligatorios para el pago"]);
