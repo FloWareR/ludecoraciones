@@ -79,7 +79,7 @@ if ($data['action'] === 'register') {
         echo json_encode(["error" => "Faltan datos para el inicio de sesión"]);
     }
 
-} } elseif ($data['action'] === 'payment') {
+} elseif ($data['action'] === 'payment') {
     if (isset($data['usuario'], $data['correo'], $data['tarjeta'], $data['vencimiento'], $data['cvv'], $data['product_id'])) {
         $pdo->beginTransaction();
         try {
@@ -96,8 +96,8 @@ if ($data['action'] === 'register') {
                 ':product_id' => $data['product_id']
             ]);
 
-            // Actualizar estado del producto a 'apartado'
-            $updateSql = "UPDATE products SET status = 'apartado' WHERE id = :product_id";
+            // Actualizar estado del producto a 'apartado' usando la columna 'disponible'
+            $updateSql = "UPDATE products SET disponible = 'apartado' WHERE id = :product_id";
             $updateStmt = $pdo->prepare($updateSql);
             $updateStmt->execute([':product_id' => $data['product_id']]);
 
