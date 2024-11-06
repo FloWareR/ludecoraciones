@@ -313,7 +313,7 @@ form input, form textarea {
 }
 
 .card:hover img {
-    transform: scale(1.05); /* Suave zoom al pasar el cursor */
+    transform: scale(1.05); /* aSuave zoom al pasar el cursor */
 }
 
 .card:hover .caption {
