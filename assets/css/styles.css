@@ -262,7 +262,7 @@ form input, form textarea {
 }
 
 .gallery {
-
+    display: block;
 }
 
 .card {
