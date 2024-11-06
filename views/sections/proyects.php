@@ -24,6 +24,7 @@
     </div>
 
 
-    <?php include($_SERVER['DOCUMENT_ROOT'] . '/views/footer.php'); ?>
+    
 </body>
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/views/footer.php'); ?>
 </html>
