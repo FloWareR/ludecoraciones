@@ -331,6 +331,7 @@ form input, form textarea {
 /* Ajustes de tamaño variable para el grid */
 .card.tall {
     grid-row: span 2;
+    size: 10px;
 }
 
 .card.wide {
