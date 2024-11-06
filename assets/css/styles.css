@@ -260,61 +260,63 @@ form input, form textarea {
     transform: scale(1.1);
     z-index: 2;
 }
+
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 10px; /* Reduced gap for a tighter layout */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Hacemos las columnas más pequeñas */
+    gap: 10px;
     width: 100%;
     max-width: 1200px;
     margin: auto;
 }
 
-/* Card styles */
 .card {
     position: relative;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background-color: #fff;
 }
 
 .card img {
     width: 100%;
-    height: auto;
+    height: 200px; /* Ajustamos una altura para todas las imágenes */
+    object-fit: contain; /* Evita que se recorten y muestra toda la imagen */
     display: block;
     transition: transform 0.5s ease;
 }
 
-/* Overlay caption */
 .card .caption {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.6); /* Dark overlay background */
+    background: rgba(0, 0, 0, 0.6);
     color: #fff;
     padding: 10px;
-    font-size: 16px;
+    font-size: 14px;
     text-align: center;
     opacity: 0;
     transform: translateY(100%);
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-/* Hover effects */
+/* Efecto hover */
 .card:hover {
     transform: scale(1.05);
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .card:hover img {
-    transform: scale(1.1);
+    transform: scale(1.05); /* Suave zoom al pasar el cursor */
 }
 
 .card:hover .caption {
     opacity: 1;
     transform: translateY(0);
 }
+
 
 @media (min-width: 1600px) {
     .hero-form-container {
