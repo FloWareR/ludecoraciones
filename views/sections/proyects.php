@@ -9,7 +9,7 @@
 <body>
     <?php include($_SERVER['DOCUMENT_ROOT'] . '/views/header.php'); ?>
 
-    <div class="gallery">
+<div class="gallery">
     <div class="card">
         <img src="/assets/images/img1.jpeg" alt="Cumpleaños con globos morados">
         <div class="caption">Cumpleaños con globos morados</div>
@@ -22,6 +22,7 @@
         <img src="/assets/images/img3.jpeg" alt="Graduacion escolar">
         <div class="caption">Graduacion escolar</div>
     </div>
+</div>
 </div>
 
 
