@@ -262,7 +262,13 @@ form input, form textarea {
 }
 
 .gallery {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Espacio entre cada tarjeta */
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .card {
