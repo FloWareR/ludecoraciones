@@ -23,7 +23,6 @@
         <div class="caption">Graduacion escolar</div>
     </div>
 </div>
-</div>
 
 
     
