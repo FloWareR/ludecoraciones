@@ -10,7 +10,7 @@
     <?php include($_SERVER['DOCUMENT_ROOT'] . '/views/header.php'); ?>
 
     <main>
-
+    console.log(document.styleSheets);
     <div class="gallery">
             <div class="card tall">
                 <img src="/assets/images/img3.jpeg" alt="Cumpleaños con globos morados">
