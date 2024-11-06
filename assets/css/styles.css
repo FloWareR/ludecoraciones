@@ -310,7 +310,51 @@ form input, form textarea {
     transform: scale(1.1);
     z-index: 2;
 }
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
+/* Tarjetas de la galería */
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Ajustes de tamaño variable para el grid */
+.card.tall {
+    grid-row: span 2;
+}
+
+.card.wide {
+    grid-column: span 2;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.caption {
+    padding: 10px;
+    font-size: 16px;
+    color: #555;
+    text-align: center;
+}
+
+/* Efecto hover */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
 @media (min-width: 1600px) {
     .hero-form-container {
         gap: 40px;
