@@ -150,57 +150,6 @@ form input, form textarea {
     font-size: 16px;
 }
 
-.benefits-section {
-    display: flex;
-    justify-content: space-between;
-    margin: 30px;
-}
-
-.benefit {
-    background-color: #def7ff;
-    padding: 15px;
-    border-radius: 5px;
-    text-align: center;
-    width: 30%;
-}
-
-.comments-section {
-    display: flex;
-    justify-content: space-between ;
-    margin-bottom: 30px;
-    margin-left: 200px;
-    margin-right: 200px;
-}
-
-.comment-card {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 15px;
-    width: 20%;
-    text-align: center;
-}
-
-.comment-card img {
-    max-width: 80px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
-.image-gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 10px; 
-    max-width: 1000px;
-    margin: 0 auto; 
-}
-
-.image-gallery img {
-    aspect-ratio: 1 / 1; 
-    object-fit: cover; 
-    border-radius: 5px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 2); 
-    
-}
 #about {
     display: flex;
     flex-direction: row;
@@ -260,7 +209,6 @@ form input, form textarea {
     padding: 50px;
 }
 
-/* Bordes curvos y animación de transición para las imágenes */
 .carousel-image {
     transition: transform 0.5s ease, opacity 0.5s ease;
     border-radius: 20px;
@@ -271,10 +219,9 @@ form input, form textarea {
     width: 300px;
     height: auto;
     display: block;
-    border-radius: 20px; /* Bordes curvos */
+    border-radius: 20px; 
 }
 
-/* Estilo principal para la imagen en el centro */
 .main-image {
     transform: scale(1.1);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
@@ -282,7 +229,6 @@ form input, form textarea {
     position: relative;
 }
 
-/* Opacidad y escala reducida para las imágenes laterales */
 .previous-image, .next-image {
     opacity: 0.3;
     transform: scale(0.9);
@@ -290,10 +236,9 @@ form input, form textarea {
     z-index: 1;
 }
 
-/* Estilos del botón */
 .carousel-button {
     position: absolute;
-    bottom: -40px; /* Coloca el botón debajo de la imagen */
+    bottom: -40px;
     left: 50%;
     transform: translateX(-50%);
     padding: 20px 20px;
@@ -314,7 +259,8 @@ form input, form textarea {
     opacity: 1;
     transform: scale(1.1);
     z-index: 2;
-}.gallery {
+}
+.gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 15px;
@@ -323,26 +269,18 @@ form input, form textarea {
     margin: 0 auto;
 }
 
-/* Ejemplo sin unidades en `0` */
 .card {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
-/* Fallback para background-color con RGBA */
 .nav-links a:hover {
     background-color: #ffb6c1; /* Fallback para navegadores antiguos */
     background-color: rgba(255, 182, 193, 0.7);
 }
 
-/* Compatibilidad de `box-sizing` */
-* {
-    box-sizing: border-box;
-}
 
-/* Ajustes para evitar `!important` */
 body .gallery .card {
-    /* Especificidad ajustada para evitar `!important` */
     background-color: #fff;
     border-radius: 8px;
     overflow: hidden;
