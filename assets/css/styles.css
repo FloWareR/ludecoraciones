@@ -305,6 +305,7 @@ form input, form textarea {
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
+
 /* Efecto hover */
 .card:hover {
     transform: scale(1.05);
