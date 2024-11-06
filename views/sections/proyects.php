@@ -13,15 +13,15 @@
 
     <div class="gallery">
             <div class="card tall">
-                <img src="/Proyecto/assets/images/img3.jpeg" alt="Cumpleaños con globos morados">
+                <img src="/assets/images/img3.jpeg" alt="Cumpleaños con globos morados">
                 <div class="caption">Cumpleaños con globos morados</div>
             </div>
             <div class="card">
-                <img src="/Proyecto/assets/images/img4.jpeg" alt="Cumpleaños colores vibrantes">
+                <img src="/assets/images/img4.jpeg" alt="Cumpleaños colores vibrantes">
                 <div class="caption">Cumpleaños colores vibrantes</div>
             </div>
             <div class="card">
-                <img src="/Proyecto/assets/images/img5.jpeg" alt="Graduación escolar">
+                <img src="/assets/images/img5.jpeg" alt="Graduación escolar">
                 <div class="caption">Graduación escolar</div>
     </div>
 
