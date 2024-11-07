@@ -11,7 +11,7 @@
   session_start();
   $core = new \System\Core();
   $router = \System\Router::getInstance("index",SUBDIR);
-  //\Utilities\Utilities::print($router);
+  \Utilities\Utilities::print($router);
   
   $noFound = true;
   $controllerName = $router->getController();
