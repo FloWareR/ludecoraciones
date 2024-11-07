@@ -2,7 +2,7 @@
   define("DEV_ENV",true);
   //define("SUBDIR","/practica1/"); //si estoy en xampp
   define("SUBDIR","");
-  define("URL",'https://'.$_SERVER["SERVER_NAME"].'/'.SUBDIR);
+  define("URL",'https://'.ludecoraciones.com.'/'.SUBDIR);
 
   define("DOCUMENT_ROOT",$_SERVER["DOCUMENT_ROOT"].'/'.SUBDIR);
   define("APPLICATION",DOCUMENT_ROOT.'app');
