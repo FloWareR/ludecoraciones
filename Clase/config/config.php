@@ -1,7 +1,7 @@
 <?php 
   define("DEV_ENV",true);
   //define("SUBDIR","/practica1/"); //si estoy en xampp
-  //define("SUBDIR","Clase");
+  define("SUBDIR","Clase");
   define("URL",'https://'.$_SERVER["SERVER_NAME"].'/'.SUBDIR);
 
   define("DOCUMENT_ROOT",$_SERVER["DOCUMENT_ROOT"].'/'.SUBDIR);
