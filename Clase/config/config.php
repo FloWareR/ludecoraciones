@@ -1,7 +1,7 @@
 <?php 
   define("DEV_ENV",true);
   //define("SUBDIR","/practica1/"); //si estoy en xampp
-  define("SUBDIR","Clase");
+  //define("SUBDIR","Clase");
   define("URL",'https://'.$_SERVER["SERVER_NAME"].'/'.SUBDIR);
 
   define("DOCUMENT_ROOT",$_SERVER["DOCUMENT_ROOT"].'/'.SUBDIR);
@@ -20,7 +20,7 @@
   define("DB_CONFIG", $dbconfig);
   define('CHARSET','utf8');
 
-  define("ERROR_NO", serialize (array (2002,1045,42000))); // Errores por 
+  define("ERROR_NO", serialize (array (2002,1045,42000))); 
   define("TIME_ZONE",'America/Mexico_City');
   define("LIMITROWS_DEFAULT",25);
   define('ROUTES', []);
