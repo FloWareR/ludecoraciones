@@ -30,7 +30,7 @@ class Router
     /* if not detect the route change this */
     $this->route = $_SERVER["REQUEST_URI"];
     if(is_array(ROUTES) and !empty(ROUTES)){
-      $this->routes = ROUTES;   
+      $this->routes = ROUTES;
       $this->setAlias();
     }
     $this->basedir = $basedir;
@@ -56,9 +56,9 @@ class Router
   public function setRouter()
   {
     // verify if isIgnore active and add directory prefix if it has something
-    /*if($this->isIgnore === true and trim($this->dirIgnore) != ""){
+    if($this->isIgnore === true and trim($this->dirIgnore) != ""){
       $this->controller = $this->dirIgnore.'/';
-    }*/
+    }
     if(trim($this->arrayRoute["controller"]) == "" ){
       if(isset($this->routes["default"]) and trim($this->routes["default"]) != "" and $this->isIgnore == false){
         $this->controller .= $this->routes["default"].'/'.$this->defaultController;

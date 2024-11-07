@@ -1,6 +1,7 @@
 <?php 
-  //define("DEV_ENV",true);
-  define("SUBDIR", "/Clase/");  //define("SUBDIR","");
+  define("DEV_ENV",true);
+  //define("SUBDIR","/practica1/"); //si estoy en xampp
+  define("SUBDIR","");
   define("URL",'https://'.$_SERVER["SERVER_NAME"].'/'.SUBDIR);
 
   define("DOCUMENT_ROOT",$_SERVER["DOCUMENT_ROOT"].'/'.SUBDIR);
@@ -12,9 +13,9 @@
   $dbconfig = array();
   $dbconfig["default"]["DB_TYPE"] = "mysql";
   $dbconfig["default"]["DB_HOST"] = "localhost";
-  $dbconfig["default"]["DB_NAME"] = "test";
-  $dbconfig["default"]["DB_USER"] = "root";
-  $dbconfig["default"]["DB_PASS"] = "";
+  $dbconfig["default"]["DB_NAME"] = "u331027013_AulaGramma";
+  $dbconfig["default"]["DB_USER"] = "u331027013_Aula";
+  $dbconfig["default"]["DB_PASS"] = "Manchas714";
 
   define("DB_CONFIG", $dbconfig);
   define('CHARSET','utf8');
