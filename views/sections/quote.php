@@ -62,7 +62,7 @@ function abrirW() {
             </select>
 
             <label for="detalles">Detalles de la decoración que deseas (opcional):</label>
-            <textarea id="detalles" name="detalles" rows="4"></textarea>
+            <textarea id="detalles" name="detalles" rows="3"></textarea>
 
             <input type="submit" value="Enviar por WhatsApp" class="cta-button">
         </form>
