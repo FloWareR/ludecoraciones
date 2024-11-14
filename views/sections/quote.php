@@ -35,7 +35,10 @@ function abrirW() {
 <body>
 
     <?php include($_SERVER['DOCUMENT_ROOT'] . '/views/header.php'); ?>
-    <h1 class="title">Cotizaciones</h1>
+    
+    <div class="header-container">
+    <h1 class="title">LuDecoraciones</h1>
+    </div>
 
     <div class="form-section">
         <form onsubmit="abrirW(); return false;">
