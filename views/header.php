@@ -3,7 +3,7 @@
         <img src="/assets/images/logo.png" alt="Logo de LU Decoraciones">
     </div>
     <div>
-        <h1>LuDecoraciones</h1>
+        <h1>        LuDecoraciones</h1>
     </div>
     <nav>
         <ul class="nav-links">
