@@ -9,10 +9,10 @@ body {
     font-family: 'Itim', Arial, sans-serif; 
     background-color: #ffffff;
     color: #534f4f;
-    margin: 0; /* Quita los márgenes del cuerpo */
+    margin: 0; 
 }
 main {
-    padding: 0 2%; /* Mantiene el padding en el contenido */
+    padding: 0 2%; 
 }
 
 /* Footer pegado al fondo y con margen superior */
@@ -48,7 +48,6 @@ h1.title {
 }
 .navbar {
     background-color: #ffffff; 
-    padding: 10px 10px; 
     display: flex;
     align-items: center;
     justify-content: space-between; 
