@@ -154,16 +154,18 @@ form input, form textarea {
 select {
     font-family: 'Itim', Arial, sans-serif; 
     background-color: #fff;
-    color: #534f4f; /* Color de texto */
+    color: #534f4f;
     padding: 12px 20px;
-    border: 1px solid #b8c4ff; /* Borde */
-    border-radius: 25px; /* Hacer el select más circular */
+    border: 1px solid #b8c4ff; 
+    border-radius: 25px; 
     outline: none;
     cursor: pointer;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
     width: 100%;
-    max-width: 300px; /* Ajusta el ancho según sea necesario */
+    max-width: 300px; 
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+
 }
 
 /* Cambiar el estilo al hacer hover */
@@ -180,7 +182,7 @@ select:focus {
 
 option {
     background-color: #fff;
-    font-size: 18px;
+    font-size: 16px;
     color: #534f4f;
     padding: 10px;
 }
