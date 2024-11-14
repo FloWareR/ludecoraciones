@@ -4,12 +4,6 @@
     font-weight: normal;
     font-style: normal;
 }
-/* Bordes curvos y animación de transición para las imágenes */
-/* Bordes curvos y animación de transición para las imágenes */
-/* Bordes curvos y animación de transición para las imágenes */
-/* Bordes curvos y animación de transición para las imágenes */
-/* Bordes curvos y animación de transición para las imágenes */
-
 
 body {
     font-family: 'Itim', Arial, sans-serif; 
@@ -54,7 +48,7 @@ h1.title {
 }
 .navbar {
     background-color: #ffffff; 
-    padding: 10px 20px; 
+    padding: 10px 10px; 
     display: flex;
     align-items: center;
     justify-content: space-between; 
