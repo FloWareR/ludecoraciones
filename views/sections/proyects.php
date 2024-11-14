@@ -22,6 +22,31 @@
         <img src="/assets/images/img3.jpeg" alt="Graduacion escolar">
         <div class="caption">Graduacion escolar</div>
     </div>
+    <div class="card">
+        <img src="/assets/images/img4.jpeg" alt="Graduacion escolar">
+        <div class="caption">Fiesta de revelación de género</div>
+    </div>
+    <div class="card">
+        <img src="/assets/images/img5.jpeg" alt="Graduacion escolar">
+        <div class="caption">Cumpleaños bts</div>
+    </div>
+    <div class="card">
+        <img src="/assets/images/img6.jpeg" alt="Graduacion escolar">
+        <div class="caption">Fiesta de primer año</div>
+    </div>
+    <div class="card">
+        <img src="/assets/images/img7.jpeg" alt="Graduacion escolar">
+        <div class="caption">Cumpleaños basquetbol</div>
+    </div>
+    <div class="card">
+        <img src="/assets/images/img8.jpeg" alt="Graduacion escolar">
+        <div class="caption">Cumpleaños goku</div>
+    </div>
+    <div class="card">
+        <img src="/assets/images/img9.jpeg" alt="Graduacion escolar">
+        <div class="caption">Graduacion escolar</div>
+    </div>
+
 </div>
 
 
