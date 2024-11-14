@@ -264,7 +264,7 @@ form input, form textarea {
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    gap: 5px; /* Espacio entre cada tarjeta */
+    gap: 15px; /* Espacio entre cada tarjeta */
     justify-content: center;
     width: 100%;
     max-width: 1200px;
