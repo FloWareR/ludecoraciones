@@ -35,9 +35,9 @@ function abrirW() {
 <body>
 
     <?php include($_SERVER['DOCUMENT_ROOT'] . '/views/header.php'); ?>
-    
+
     <div class="header-container">
-    <h1 class="title">LuDecoraciones</h1>
+    <h1 class="title">Cotizar</h1>
     </div>
 
     <div class="form-section">
