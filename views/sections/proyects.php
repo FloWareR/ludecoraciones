@@ -40,11 +40,11 @@
     </div>
     <div class="card">
         <img src="/assets/images/img8.jpeg" alt="Graduacion escolar">
-        <div class="caption">Cumpleaños goku</div>
+        <div class="caption">Cumpleaños Harry Potter</div>
     </div>
     <div class="card">
         <img src="/assets/images/img9.jpeg" alt="Graduacion escolar">
-        <div class="caption">Graduacion escolar</div>
+        <div class="caption">Cumpleaños goku</div>
     </div>
 
 </div>
