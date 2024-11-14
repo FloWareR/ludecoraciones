@@ -155,8 +155,9 @@ select {
     font-family: 'Itim', Arial, sans-serif; 
     background-color: #fff;
     color: #534f4f;
-    padding: 18px 20px;
-    border: 1px solid #b8c4ff; 
+    margin-bottom: 10px;
+    padding: 12px 20px;
+    border: 2px solid #b8c4ff; 
     border-radius: 25px; 
     outline: none;
     cursor: pointer;
