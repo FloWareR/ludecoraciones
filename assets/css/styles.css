@@ -151,7 +151,39 @@ form input, form textarea {
     border: 2px solid #ccc;
     
 }
+select {
+    font-family: 'Itim', Arial, sans-serif; 
+    background-color: #fff;
+    color: #534f4f; /* Color de texto */
+    padding: 12px 20px;
+    border: 1px solid #b8c4ff; /* Borde */
+    border-radius: 25px; /* Hacer el select más circular */
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 300px; /* Ajusta el ancho según sea necesario */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
 
+/* Cambiar el estilo al hacer hover */
+select:hover {
+    border-color: #b954d8;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Cambiar el estilo al hacer focus */
+select:focus {
+    border-color: #7eb8ff;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos para las opciones dentro del select */
+option {
+    background-color: #fff;
+    color: #534f4f;
+    padding: 10px;
+}
 .cta-button {
     background-color: #ff6b81;
     color: white;

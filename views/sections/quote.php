@@ -52,14 +52,14 @@ function abrirW() {
             <input type="datetime-local" id="fecha_hora" name="fecha_hora" required>
 
             <label for="tipo_evento">Tipo de evento:</label>
-            <select id="tipo_evento" name="tipo_evento" required>
-                <option value="Cumpleaños">Cumpleaños</option>
-                <option value="Boda">Boda</option>
-                <option value="Fiesta Infantil">Fiesta Infantil</option>
-                <option value="Quinceañera">Quinceañera</option>
-                <option value="Evento Corporativo">Evento Corporativo</option>
-                <option value="Otro">Otro</option>
-            </select>
+                <select id="tipo_evento" name="tipo_evento" required>
+                    <option value="Cumpleaños">Cumpleaños</option>
+                    <option value="Boda">Boda</option>
+                    <option value="Fiesta Infantil">Fiesta Infantil</option>
+                    <option value="Quinceañera">Quinceañera</option>
+                    <option value="Evento Corporativo">Evento Corporativo</option>
+                    <option value="Otro">Otro</option>
+                </select>
 
             <label for="detalles">Detalles de la decoración que deseas (opcional):</label>
             <textarea id="detalles" name="detalles" rows="3"></textarea>
