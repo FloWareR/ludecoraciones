@@ -264,7 +264,7 @@ form input, form textarea {
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px; /* Espacio entre cada tarjeta */
+    gap: 5px; /* Espacio entre cada tarjeta */
     justify-content: center;
     width: 100%;
     max-width: 1200px;
@@ -272,20 +272,20 @@ form input, form textarea {
 }
 
 .card {
-    flex: 1 1 150px; /* Tamaño mínimo de cada tarjeta */
-    max-width: 200px; /* Tamaño máximo de cada tarjeta */
+    flex: 1 1 300px; /* Tamaño mínimo de cada tarjeta */
+    max-width: 400px; /* Tamaño máximo de cada tarjeta */
     position: relative;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     background-color: #fff;
 }
 
 .card img {
     width: 100%;
-    height: 200px; /* Altura fija */
-    object-fit: contain; /* Asegura que la imagen no se recorte */
+    height: 300px; /* Altura fija más grande */
+    object-fit: cover; /* La imagen se recorta para ajustarse a la tarjeta */
     display: block;
     transition: transform 0.5s ease;
 }
@@ -298,13 +298,12 @@ form input, form textarea {
     background: rgba(0, 0, 0, 0.6);
     color: #fff;
     padding: 10px;
-    font-size: 14px;
+    font-size: 16px;
     text-align: center;
     opacity: 0;
     transform: translateY(100%);
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
-
 
 /* Efecto hover */
 .card:hover {
@@ -313,14 +312,13 @@ form input, form textarea {
 }
 
 .card:hover img {
-    transform: scale(1.05); /* aSuave zoom al pasar el cursor */
+    transform: scale(1.05); /* Suave zoom al pasar el cursor */
 }
 
 .card:hover .caption {
     opacity: 1;
     transform: translateY(0);
 }
-
 
 @media (min-width: 1600px) {
     .hero-form-container {
