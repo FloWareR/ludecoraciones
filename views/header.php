@@ -2,8 +2,8 @@
     <div class="logo">
         <img src="/assets/images/logo.png" alt="Logo de LU Decoraciones">
     </div>
-    <div>
-        <h1>        LuDecoraciones</h1>
+    <div >
+    <h1 class="title">LuDecoraciones</h1>
     </div>
     <nav>
         <ul class="nav-links">
