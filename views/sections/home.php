@@ -35,7 +35,9 @@
 
     updateCarousel();
 </script>
-
+<div class="header-container">
+    <h1 class="title">LuDecoraciones</h1>
+    </div>
 <div class="carousel-container">
     <div class="carousel">
         <div class="carousel-image previous-image" onclick="moveCarousel(-1)">
