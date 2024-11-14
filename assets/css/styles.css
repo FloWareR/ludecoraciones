@@ -178,9 +178,9 @@ select:focus {
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Estilos para las opciones dentro del select */
 option {
     background-color: #fff;
+    font-size: 18px;
     color: #534f4f;
     padding: 10px;
 }
