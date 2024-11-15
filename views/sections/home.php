@@ -1,28 +1,21 @@
 <script>
-    let currentIndex = 1; 
+    let currentIndex = 1;
     const images = [
         "assets/images/img1.jpeg",
         "assets/images/img2.jpeg",
         "assets/images/img3.jpeg",
         "assets/images/img4.jpeg",
-        "assets/images/img5.jpeg",
-        "assets/images/img6.jpeg",
-        "assets/images/img7.jpeg",
-        "assets/images/img8.jpeg",
-        "assets/images/img9.jpeg"
+        "assets/images/img5.jpeg"
     ];
 
     function updateCarousel() {
-        // Definir la imagen anterior, actual y siguiente
         const prevIndex = (currentIndex - 1 + images.length) % images.length;
         const nextIndex = (currentIndex + 1) % images.length;
 
-        // Seleccionar los elementos de imagen en el carrusel
         const previousImage = document.querySelector('.previous-image img');
         const mainImage = document.querySelector('.main-image img');
         const nextImage = document.querySelector('.next-image img');
 
-        // Asignar las fuentes de las imágenes
         previousImage.src = images[prevIndex];
         mainImage.src = images[currentIndex];
         nextImage.src = images[nextIndex];
@@ -34,7 +27,20 @@
     }
 
     updateCarousel();
+
+    // Automático para dispositivos móviles
+    function autoCarousel() {
+        if (window.innerWidth < 768) {
+            setInterval(() => {
+                moveCarousel(1);
+            }, 3000); // Cambia cada 3 segundos
+        }
+    }
+
+    autoCarousel();
+    window.addEventListener('resize', autoCarousel);
 </script>
+
 <div class="header-container">
     <h1 class="title">LuDecoraciones</h1>
     </div>
