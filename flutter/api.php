@@ -79,7 +79,7 @@ if ($data['action'] === 'register') {
         echo json_encode(["error" => "Faltan datos para el inicio de sesión"]);
     }
 
-    if ($data['action'] === 'payment') {
+    if ($action === 'payment') {
         if (isset($data['usuario'], $data['correo'], $data['tarjeta'], $data['vencimiento'], $data['cvv'], $data['product_id'], $data['date_time'])) {
             try {
                 $sql = "INSERT INTO payments (usuario, correo, tarjeta, vencimiento, cvv, product_id, date_time) 
@@ -102,7 +102,10 @@ if ($data['action'] === 'register') {
         } else {
             echo json_encode(["error" => "Faltan datos obligatorios para el pago"]);
         }
+    } else {
+        echo json_encode(["error" => "Acción no válida"]);
     }
+    
         // Verificar que todos los datos necesarios para registrar el pago estén presentes
     if (isset($data['usuario'], $data['correo'], $data['tarjeta'], $data['vencimiento'], $data['cvv'], $data['product_id'])) {
         try {
