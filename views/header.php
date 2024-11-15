@@ -1,10 +1,4 @@
 
-<script>
-    function toggleDrawer() {
-        const drawer = document.getElementById('drawer');
-        drawer.style.display = drawer.style.display === 'flex' ? 'none' : 'flex';
-    }
-</script>
 
 <div class="navbar">
     <div class="logo">
