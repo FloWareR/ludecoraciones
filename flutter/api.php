@@ -79,8 +79,31 @@ if ($data['action'] === 'register') {
         echo json_encode(["error" => "Faltan datos para el inicio de sesión"]);
     }
 
-} elseif ($data['action'] === 'payment') {
-    // Verificar que todos los datos necesarios para registrar el pago estén presentes
+    if ($data['action'] === 'payment') {
+        if (isset($data['usuario'], $data['correo'], $data['tarjeta'], $data['vencimiento'], $data['cvv'], $data['product_id'], $data['date_time'])) {
+            try {
+                $sql = "INSERT INTO payments (usuario, correo, tarjeta, vencimiento, cvv, product_id, date_time) 
+                        VALUES (:usuario, :correo, :tarjeta, :vencimiento, :cvv, :product_id, :date_time)";
+                $stmt = $pdo->prepare($sql);
+                $stmt->execute([
+                    ':usuario' => $data['usuario'],
+                    ':correo' => $data['correo'],
+                    ':tarjeta' => $data['tarjeta'],
+                    ':vencimiento' => $data['vencimiento'],
+                    ':cvv' => $data['cvv'],
+                    ':product_id' => $data['product_id'],
+                    ':date_time' => $data['date_time']
+                ]);
+    
+                echo json_encode(["success" => true, "message" => "Pago registrado correctamente."]);
+            } catch (PDOException $e) {
+                echo json_encode(["success" => false, "error" => "Error al registrar el pago: " . $e->getMessage()]);
+            }
+        } else {
+            echo json_encode(["error" => "Faltan datos obligatorios para el pago"]);
+        }
+    }
+        // Verificar que todos los datos necesarios para registrar el pago estén presentes
     if (isset($data['usuario'], $data['correo'], $data['tarjeta'], $data['vencimiento'], $data['cvv'], $data['product_id'])) {
         try {
             // Registro del pago con el ID del producto
