@@ -4,7 +4,6 @@
     <div class="logo">
         <img src="/assets/images/logo.png" alt="Logo">
     </div>
-    <button class="menu-toggle" onclick="toggleDrawer()">☰</button>
     <nav id="drawer" class="drawer-nav">
         <ul class="nav-links">
             <li><a href="https://ludecoraciones.com/">Inicio</a></li>
