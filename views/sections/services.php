@@ -24,11 +24,7 @@
                     <h3>Renta de Inventario</h3>
                     <p>Renta de mobiliario y equipo para eventos, como mesas, sillas, y toldos.</p>
                 </div>
-                <div class="service-item">
-                    <img src="/assets/images/logistica.jpg" alt="Logística y Coordinación">
-                    <h3>Logística y Coordinación</h3>
-                    <p>Nos encargamos de la planificación y ejecución de tu evento, para que tú solo disfrutes.</p>
-                </div>
+
             </div>
         </div>
 
