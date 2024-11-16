@@ -145,12 +145,14 @@ form input, form textarea {
     margin-bottom: 20px;
     border-radius: 20px; 
     border: 2px solid #ccc;
+    font-family: 'Itim', Arial, sans-serif; 
+
     
 }
 select {
     font-family: 'Itim', Arial, sans-serif; 
     background-color: #fff;
-    color: #534f4f;
+    color: #1A1721;
     margin-bottom: 10px;
     padding: 12px 20px;
     border: 2px solid #b8c4ff; 
@@ -184,8 +186,8 @@ option {
     padding: 10px;
 }
 .cta-button {
-    background-color: #ff6b81;
-    color: white;
+    background-color: #8B00E8;
+    color: #7DB7FF;
     border: none;
     padding: 12px 20px;
     cursor: pointer;
