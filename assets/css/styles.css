@@ -75,13 +75,13 @@ h1.title {
     color: #082126;
     padding: 15px 25px; 
     border-radius: 20px; 
-    transition: background-color 0.3s ease, transform 0.3s ease; 
+    transition: background-color 0.5s ease, transform 0.5s ease; 
 }
 
 .nav-links a:hover {
     background-color: #082126; /* Rosa pastel semi opaco */
     color: #F59AC3;
-    transform: scale(1.05); /* Aumenta el tamaño del botón ligeramente al hacer hover */
+    transform: scale(1.2); /* Aumenta el tamaño del botón ligeramente al hacer hover */
 }
 
 .logo img {
