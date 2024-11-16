@@ -442,7 +442,7 @@ option {
 }
 .container {
     padding: 20px; 
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     border-radius: 6px;
     background-color: #F59AC3;
