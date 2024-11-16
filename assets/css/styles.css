@@ -444,16 +444,16 @@ option {
     max-width: 1200px;
     margin: 0 auto;
     border-radius: 4px;
-    background-color: rgb(170, 120, 218);
+    background-color: #F59AC3;
     text-align: center;
 }
 .container h2{
 
     font-size: 40px;
-
+    color: #082126;
 }
 .container p{
-
+    color: #082126;
     font-size: 20px;
 
 }
@@ -487,12 +487,12 @@ option {
 .service-item h3 {
     font-size: 1.5rem;
     margin: 20px 15px;
-    color: #b954d8;
+    color: #082126;
 }
 
 .service-item p {
     font-size: 1rem;
-    color: #534f4f;
+    color:#082126;
     margin: 0 15px 20px;
     line-height: 1.6;
 }
