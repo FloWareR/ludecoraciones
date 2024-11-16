@@ -23,14 +23,15 @@ footer {
     color: #082126;
     padding: 20px;
     text-align: center;
+    align-items: center;
     width: 100%; /* Ocupa todo el ancho */
     margin-top: 60px; /* Añade separación con el contenido superior */
     position: relative;
     left: 0;
 }
 .social-icon {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     display: inline-block;
 }
 h1{
