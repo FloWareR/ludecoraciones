@@ -10,24 +10,27 @@
 <body>
     <?php include($_SERVER['DOCUMENT_ROOT'] . '/views/header.php'); ?>
 
+
+
         <div class="container">
             <h2>Nuestros Servicios</h2>
             <p class="description">Ya sea para un evento pequeño o un evento corporativo, tenemos la experiencia y los recursos para hacerlo posible.</p>
             <div class="service-cards">
-                <div class="service-item">
+                <!-- Tarjeta 1 -->
+                <a href="/views/quote.php" class="service-item">
                     <img src="/assets/images/img6.jpeg" alt="Decoración de Eventos">
                     <h3>Decoración de Eventos</h3>
                     <p>Ofrecemos un servicio completo de decoración para bodas, cumpleaños, y eventos especiales.</p>
-                </div>
-                <div class="service-item">
+                </a>
+                
+                <!-- Tarjeta 2 -->
+                <a href="/views/quote.php" class="service-item">
                     <img src="/assets/images/img11.jpeg" alt="Renta de Inventario">
                     <h3>Renta de Inventario</h3>
-                    <p>Renta de mobiliario como letredos LED, mamparas circulares, estructuras de herreria, mariposas con luces, numero 15 con luces, caja de barbie entre otros.</p>
-                </div>
-
+                    <p>Renta de mobiliario como letreros LED, mamparas circulares, estructuras de herrería, mariposas con luces, número 15 con luces, caja de barbie, entre otros.</p>
+                </a>
             </div>
         </div>
-
     <?php include($_SERVER['DOCUMENT_ROOT'] . '/views/footer.php'); ?>
 </body>
 </html> 

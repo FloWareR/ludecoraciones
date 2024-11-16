@@ -509,10 +509,22 @@ option {
     transition: transform 0.5s ease;
 }
 
-.service-item:hover h3 {
-    color: #7eb8ff;
+
+.service-cards a {
+    text-decoration: none;
+    color: inherit; /* Mantener el color del texto */
+    display: block;
 }
 
+.service-item {
+    cursor: pointer; /* Cambiar el cursor a mano al pasar por la tarjeta */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
 /* Media queries para la sección de servicios */
 @media (max-width: 1024px) {
     .service-cards {
