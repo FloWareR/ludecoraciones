@@ -87,12 +87,6 @@ h1.title {
     max-width: 200px;
 }
 
-.container {
-    padding: 20px; 
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: blueviolet;
-}
 
 
 .title {
@@ -445,6 +439,14 @@ option {
         padding: 15px;
     }
 }
+.container {
+    padding: 20px; 
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 4px;
+    background-color: rgb(170, 120, 218);
+}
+
 /* Estilos para la sección de servicios */
 .service-cards {
     display: flex;
