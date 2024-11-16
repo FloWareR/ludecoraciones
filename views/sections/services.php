@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="../../assets/css/styles.css"> 
 </head>
 <body>
+    <?php include($_SERVER['DOCUMENT_ROOT'] . '/views/header.php'); ?>
+
         <div class="container">
             <h2>Nuestros Servicios</h2>
             <p class="description">Ya sea para un evento pequeño o un evento corporativo, tenemos la experiencia y los recursos para hacerlo posible.</p>
