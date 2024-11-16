@@ -15,7 +15,7 @@
             <p class="description">Ya sea para un evento pequeño o un evento corporativo, tenemos la experiencia y los recursos para hacerlo posible.</p>
             <div class="service-cards">
                 <div class="service-item">
-                    <img src="/assets/images/evento1.jpg" alt="Decoración de Eventos">
+                    <img src="/assets/images/img6.jpeg" alt="Decoración de Eventos">
                     <h3>Decoración de Eventos</h3>
                     <p>Ofrecemos un servicio completo de decoración para bodas, cumpleaños, y eventos especiales.</p>
                 </div>
