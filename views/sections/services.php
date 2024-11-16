@@ -20,7 +20,7 @@
                     <p>Ofrecemos un servicio completo de decoración para bodas, cumpleaños, y eventos especiales.</p>
                 </div>
                 <div class="service-item">
-                    <img src="/assets/images/img6.jpeg" alt="Renta de Inventario">
+                    <img src="/assets/images/img11.jpeg" alt="Renta de Inventario">
                     <h3>Renta de Inventario</h3>
                     <p>Renta de mobiliario como letredos LED, mamparas circulares, estructuras de herreria, mariposas con luces, numero 15 con luces, caja de barbie entre otros.</p>
                 </div>
