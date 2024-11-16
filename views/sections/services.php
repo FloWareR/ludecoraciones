@@ -22,7 +22,7 @@
                 <div class="service-item">
                     <img src="/assets/images/img6.jpeg" alt="Renta de Inventario">
                     <h3>Renta de Inventario</h3>
-                    <p>Renta de mobiliario y equipo de decoracion de eventos.</p>
+                    <p>Renta de mobiliario como letredos LED, mamparas circulares, estructuras de herreria, mariposas con luces, numero 15 con luces, caja de barbie entre otros.</p>
                 </div>
 
             </div>
