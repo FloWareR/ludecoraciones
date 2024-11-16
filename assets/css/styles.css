@@ -17,8 +17,9 @@ main {
 
 /* Footer pegado al fondo y con margen superior */
 footer {
-    background-color: #c194dbcb;
-    color: white;
+    background-color: #F59AC3;
+    font-size: 18px;
+    color: #082126;
     padding: 20px;
     text-align: center;
     width: 100%; /* Ocupa todo el ancho */
@@ -71,14 +72,14 @@ h1.title {
 
 .nav-links a {
     text-decoration: none;
-    color: #534f4f;
+    color: #082126;
     padding: 15px 25px; 
     border-radius: 20px; 
     transition: background-color 0.3s ease, transform 0.3s ease; 
 }
 
 .nav-links a:hover {
-    background-color: rgba(255, 182, 193, 0.7); /* Rosa pastel semi opaco */
+    background-color: #F59AC3; /* Rosa pastel semi opaco */
     color: white;
     transform: scale(1.05); /* Aumenta el tamaño del botón ligeramente al hacer hover */
 }
