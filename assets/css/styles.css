@@ -137,6 +137,7 @@ form {
 form label {
     margin-bottom: 10px;
     text-align: left; 
+    color: #1A1721;
 }
 
 form input, form textarea {
@@ -354,7 +355,7 @@ option {
 }
 
 .card:hover img {
-    transform: scale(1.05); /* Suave zoom al pasar el cursor */
+    transform: scale(1.05); 
 }
 
 .card:hover .caption {
