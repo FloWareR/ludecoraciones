@@ -447,7 +447,11 @@ option {
     background-color: rgb(170, 120, 218);
     text-align: center;
 }
+.container h2{
 
+    font-size: 40px;
+
+}
 .container p{
 
     font-size: 20px;
