@@ -10,6 +10,7 @@ body {
     background-color: #ffffff;
     color: #534f4f;
     margin: 0; 
+    font-size: 18px;
 }
 main {
     padding: 0 2%; 
@@ -27,7 +28,11 @@ footer {
     position: relative;
     left: 0;
 }
-
+.social-icon {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+}
 h1{
        color: #b954d8;
  
