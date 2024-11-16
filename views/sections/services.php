@@ -20,9 +20,9 @@
                     <p>Ofrecemos un servicio completo de decoración para bodas, cumpleaños, y eventos especiales.</p>
                 </div>
                 <div class="service-item">
-                    <img src="/assets/images/inventario.jpg" alt="Renta de Inventario">
+                    <img src="/assets/images/img6.jpeg" alt="Renta de Inventario">
                     <h3>Renta de Inventario</h3>
-                    <p>Renta de mobiliario y equipo para eventos, como mesas, sillas, y toldos.</p>
+                    <p>Renta de mobiliario y equipo de decoracion de eventos.</p>
                 </div>
 
             </div>
