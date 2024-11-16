@@ -452,6 +452,11 @@ option {
     font-size: 20px;
 
 }
+.container p{
+
+    font-size: 20px;
+
+}
 /* Estilos para la sección de servicios */
 .service-cards {
     display: flex;
