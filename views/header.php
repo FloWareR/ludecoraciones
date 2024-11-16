@@ -1,6 +1,4 @@
-<head>
-    <title>LuDecoraciones</title>
-</head>
+
 <div class="navbar">
     <div class="logo">
         <img src="/assets/images/logo.png" alt="Logo">
