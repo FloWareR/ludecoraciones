@@ -445,8 +445,13 @@ option {
     margin: 0 auto;
     border-radius: 4px;
     background-color: rgb(170, 120, 218);
+    text-align: center;
 }
+.container p{
 
+    font-size: 20px;
+
+}
 /* Estilos para la sección de servicios */
 .service-cards {
     display: flex;
