@@ -30,4 +30,4 @@
 
     <?php include($_SERVER['DOCUMENT_ROOT'] . '/views/footer.php'); ?>
 </body>
-</html>
+</html> 

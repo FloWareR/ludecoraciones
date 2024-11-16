@@ -79,8 +79,8 @@ h1.title {
 }
 
 .nav-links a:hover {
-    background-color: #F59AC3; /* Rosa pastel semi opaco */
-    color: white;
+    background-color: #082126; /* Rosa pastel semi opaco */
+    color: #F59AC3;
     transform: scale(1.05); /* Aumenta el tamaño del botón ligeramente al hacer hover */
 }
 
