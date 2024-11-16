@@ -59,6 +59,7 @@ function abrirW() {
                     <option value="Fiesta Infantil">Fiesta Infantil</option>
                     <option value="Quinceañera">Quinceañera</option>
                     <option value="Evento Corporativo">Evento Corporativo</option>
+                    <option value="Evento Corporativo">Renta de </option>
                     <option value="Otro">Otro</option>
                 </select>
 
