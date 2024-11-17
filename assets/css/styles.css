@@ -41,6 +41,7 @@ h1{
 
 }
 h1.title {
+    color: #082126;
     display: flex;
     font-size: 36px;
     text-align: center;
