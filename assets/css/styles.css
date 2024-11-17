@@ -82,8 +82,8 @@ h1.title {
     top: 0;
     right: -100%;
     height: 100%;
-    width: 250px;
-    background-color: #000;
+    width: 225px;
+    background-color: #082126;
     color: #fff;
     padding: 20px;
     transition: right 0.3s ease-in-out;
@@ -123,7 +123,6 @@ h1.title {
     font-size: 20px;
 }
 
-/* Estilos para pantallas grandes */
 .desktop-links {
     list-style: none;
     display: flex;
