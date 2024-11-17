@@ -282,7 +282,7 @@ option {
 }
 
 .carousel-image img {
-    width: 500px;
+    width: 300px;
     height: auto;
     display: block;
     border-radius: 20px;
@@ -297,7 +297,7 @@ option {
 
 .previous-image, .next-image {
     opacity: 0.5;
-    transform: scale(0.7);
+    transform: scale(0.9);
     cursor: pointer;
     z-index: 1;
     transition: opacity 1s ease-in-out, transform 1s ease-in-out;
