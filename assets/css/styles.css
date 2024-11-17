@@ -282,7 +282,7 @@ option {
 }
 
 #about h2 {
-    font-family: 'Georgia', serif;
+    font-family: 'Itim', serif;
     color: #4b4b4b;
     font-size: 36px;
     margin-top: 0;
@@ -573,6 +573,21 @@ option {
         margin-left: 20px;
         border-radius: 8px;
         object-fit: cover;
+    }
+    #about h2 {
+        font-family: 'Itim', serif;
+        color: #4b4b4b;
+        font-size: 36px;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+    
+    #about p {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #666;
+        max-width: 100%;
+        text-align: justify
     }
     
 }
