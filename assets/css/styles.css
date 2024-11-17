@@ -311,7 +311,6 @@ option {
 .carousel-button {
     position: absolute;
     bottom: -40px;
-    left: 50%;
     transform: translateX(-50%);
     padding: 20px 20px;
     background-color: #F59AC3;
@@ -328,8 +327,8 @@ option {
 .carousel-button:hover {
     background-color: #082126;
     color: #F59AC3;
-    transform: scale(1.1);
-    transition: background-color 0.5s ease }
+    transform: scale(1.2);
+    transition: background-color 0.5s ease, transform 0.5s ease; }
 
 .carousel-image.active {
     opacity: 1;
