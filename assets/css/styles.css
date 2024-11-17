@@ -308,31 +308,6 @@ option {
 }
 
 
-.carousel-button {
-    position: absolute;
-    bottom: -40px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 20px 20px;
-    font-size: 16px;
-    color: #fff;
-    background-color: #b954d8;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.carousel-button:hover {
-    background-color: #a943c3;
-}
-
-.carousel-image.active {
-    opacity: 1;
-    transform: scale(1.1);
-    z-index: 2;
-}
-
 .gallery {
     display: flex;
     flex-wrap: wrap;
