@@ -202,6 +202,10 @@ option {
     border-radius: 25px;
     font-size: 16px;
 }
+.cta-button:hover{
+    background-color: #082126;
+    color: #F59AC3;
+}
 
 #about {
     display: flex;
