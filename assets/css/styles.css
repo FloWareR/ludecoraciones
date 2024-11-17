@@ -247,6 +247,7 @@ option {
 }
 .cta-button {
     background-color: #F59AC3;
+    size: 60px;
     color: #082126;
     border: none;
     padding: 12px 20px;
