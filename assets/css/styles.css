@@ -201,12 +201,14 @@ option {
     cursor: pointer;
     border-radius: 25px;
     font-size: 16px;
+    transition: background-color 0.5s ease, transform 0.5s ease; 
+
     
 }
 .cta-button:hover{
     background-color: #082126;
     color: #F59AC3;
-    transform: scale(1.2);
+    transform: scale(1.1);
     transition: background-color 0.5s ease, transform 0.5s ease; 
 
 }
