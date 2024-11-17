@@ -60,21 +60,20 @@ h1.title {
     align-items: center;
     justify-content: space-between;
     background-color: #ffffff;
-    padding: 10px 20px;
+    padding: 10px 10px;
 }
 
 .logo img {
     max-width: 100px;
 }
 
-/* Botón de hamburguesa */
 .hamburger-btn {
     display: none;
     background: none;
     border: none;
     font-size: 28px;
     cursor: pointer;
-}
+} 
 
 /* Drawer (menú lateral) */
 .drawer-nav {
