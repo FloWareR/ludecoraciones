@@ -570,7 +570,7 @@ option {
     }
     #about img {
         width: 100%;
-        margin-left: 20px;
+        margin-left: 5px;
         border-radius: 8px;
         object-fit: cover;
     }
