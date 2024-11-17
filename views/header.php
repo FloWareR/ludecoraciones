@@ -9,7 +9,7 @@ function toggleDrawer() {
         <img src="/assets/images/logo.png" alt="Logo">
     </div>
     <button class="hamburger-btn" onclick="toggleDrawer()">
-        ☰
+        <img src="/assets/images/Menu.png" alt="Menu">
     </button>
     <nav id="drawer" class="drawer-nav">
         <button class="close-btn" onclick="toggleDrawer()">✖</button>
