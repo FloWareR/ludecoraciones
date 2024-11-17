@@ -13,13 +13,16 @@
     ];
 
     function updateCarousel() {
+        // Definir la imagen anterior, actual y siguiente
         const prevIndex = (currentIndex - 1 + images.length) % images.length;
         const nextIndex = (currentIndex + 1) % images.length;
 
+        // Seleccionar los elementos de imagen en el carrusel
         const previousImage = document.querySelector('.previous-image img');
         const mainImage = document.querySelector('.main-image img');
         const nextImage = document.querySelector('.next-image img');
 
+        // Asignar las fuentes de las imágenes
         previousImage.src = images[prevIndex];
         mainImage.src = images[currentIndex];
         nextImage.src = images[nextIndex];
@@ -27,21 +30,11 @@
 
     function moveCarousel(direction) {
         currentIndex = (currentIndex + direction + images.length) % images.length;
-
-        // Agregar una clase temporal para la transición
-        const carousel = document.querySelector('.carousel');
-        carousel.style.transform = `translateX(${direction * -100}%)`;
-        
-        // Esperar un momento antes de actualizar el carrusel
-        setTimeout(() => {
-            carousel.style.transform = 'translateX(0)';
-            updateCarousel();
-        }, 500); // El tiempo debe coincidir con la duración de la transición en CSS
+        updateCarousel();
     }
 
     updateCarousel();
 </script>
-
 <div class="header-container">
     <h1 class="title">LuDecoraciones</h1>
     </div>
