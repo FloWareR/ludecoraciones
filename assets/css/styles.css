@@ -300,11 +300,11 @@ option {
     transform: scale(0.9);
     cursor: pointer;
     z-index: 1;
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
 
 .previous-image:hover, .next-image:hover {
-    transform: scale(1);
+    transform: scale(0.5);
     opacity: 0.8;
 }
 
