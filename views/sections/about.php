@@ -15,7 +15,7 @@
         <section id="about">
             <div class="about-text">
                 <h2>Sobre Nosotros</h2>
-                <p>LU Decoraciones es una empresa de decoraciones fundada por Lupita Ordoñez, una talentosa y experimentada decoradora de Villahermosa, Tabasco. Con una sólida formación respaldada por múltiples certificaciones en el área de decoraciones y varios años de experiencia, Lupita ha convertido su pasión por el diseño en una empresa comprometida con transformar eventos en momentos memorables.
+                <p>LU Decoraciones es una empresa de decoraciones fundada por Lupita Ordoñez, una talentosa y experimentada decoradora de Tabasco. Con una sólida formación respaldada por múltiples certificaciones en el área de decoraciones y varios años de experiencia, Lupita ha convertido su pasión por el diseño en una empresa comprometida con transformar eventos en momentos memorables.
 
 Especializados en decoraciones con globos, LU Decoraciones se dedica a llevar color, creatividad y elegancia a una amplia gama de celebraciones, brindando un servicio a domicilio personalizado que garantiza que cada detalle refleje los deseos y la personalidad del cliente. Desde eventos íntimos hasta grandes celebraciones, Lupita se esfuerza por crear espacios ideales tanto para disfrutar del evento como para capturar el recuerdo perfecto en fotografías inolvidables.
 
