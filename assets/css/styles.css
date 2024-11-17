@@ -598,14 +598,7 @@ option {
     .drawer-nav.open {
         right: 0;
     }
-    .carousel-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 80%;
-        overflow: hidden;
-        
-    }
+
 }
 
 @media (max-width: 640px) {
