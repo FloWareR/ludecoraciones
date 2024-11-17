@@ -49,7 +49,7 @@
         <div class="carousel-image next-image" onclick="moveCarousel(1)">
             <img src="assets/images/img3.jpeg" alt="Imagen 3">
         </div>
-        <button class="cta-button" onclick="window.location.href='/views/sections/quote.php'">Cotizar</button>
+        <button class="carousel-button" onclick="window.location.href='/views/sections/quote.php'">Cotizar</button>
 
     </div>
 </div>
