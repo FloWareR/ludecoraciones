@@ -572,7 +572,6 @@ option {
         width: 100%;
         margin-left: 5px;
         border-radius: 8px;
-        object-fit: cover;
     }
     #about h2 {
         font-family: 'Itim', serif;
