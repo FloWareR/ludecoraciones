@@ -201,6 +201,8 @@ option {
     cursor: pointer;
     border-radius: 25px;
     font-size: 16px;
+    transition: border-color 1s ease, box-shadow 1s ease;
+
 }
 .cta-button:hover{
     background-color: #082126;
