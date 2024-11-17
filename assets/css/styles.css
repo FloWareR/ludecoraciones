@@ -32,6 +32,7 @@ footer {
 .social-icon {
     width: 40px;
     height: 40px;
+    margin: 20px;
     display: inline-block;
 }
 h1{
