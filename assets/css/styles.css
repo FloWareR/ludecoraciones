@@ -544,42 +544,9 @@ option {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-@media (min-width: 1600px) {
-    .hero-form-container {
-        gap: 40px;
-    }
-    .hero-section img {
-        max-width: 60%;
-    }
-}
 
-@media (max-width: 1366px) {
-    .hero-form-container {
-        flex-direction: row;
-        gap: 20px;
-    }
-    .hero-section img {
-        max-width: 50%;
-    }
-}
 
-@media (max-width: 1024px) {
-    .hero-form-container {
-        flex-direction: column;
-        align-items: center;
-    }
-    .hero-section img {
-        max-width: 70%;
-    }
-        .service-cards {
-        flex-direction: column;
-        align-items: center;
-    }
-    .service-item {
-        max-width: 90%;
-    }
 
-}
 
 @media (max-width: 736px) {
     .desktop-links {
@@ -597,22 +564,14 @@ option {
     .drawer-nav.open {
         right: 0;
     }
+    .service-item img{
+        width: 60%;
 
+    }
 }
 
 @media (max-width: 640px) {
-    .hero-form-container {
-        flex-direction: column;
-        align-items: center;
-    }
 
-    .hero-section img {
-        max-width: 100%;
-    }
-
-    .form-section {
-        width: 100%;
-    }
 
     form input, form textarea {
         padding: 20px;
