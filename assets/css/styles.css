@@ -29,7 +29,6 @@ footer {
     justify-content: space-between;
 }
 .social-icon {
-    justify-content: flex-start;
     width: 40px;
     height: 40px;
     margin: 20px;
