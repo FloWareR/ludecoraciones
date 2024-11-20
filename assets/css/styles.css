@@ -27,9 +27,9 @@ footer {
     margin-top: 60px; 
     position: relative;
     left: 0;
+    
 }
 .social-icon {
-    flex-direction: column;
     width: 40px;
     height: 40px;
     margin: 20px;
