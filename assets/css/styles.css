@@ -370,7 +370,8 @@ option {
 
 
 .carousel-button {
-    size: 70px;
+    font-family: 'Itim', Arial, sans-serif; 
+    font-size: 16px;
     position: absolute;
     bottom: -40px;
     left: 50%;
