@@ -22,12 +22,11 @@ footer {
     font-size: 18px;
     color: #082126;
     padding: 20px;
-    text-align: center;
     width: 100%; 
     margin-top: 60px; 
     position: relative;
     left: 0;
-    
+    justify-content: space-between;
 }
 .social-icon {
     width: 40px;
