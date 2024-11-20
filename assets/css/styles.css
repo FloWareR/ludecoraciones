@@ -16,7 +16,6 @@ main {
     padding: 0 2%; 
 }
 
-/* Footer pegado al fondo y con margen superior */
 footer {
     background-color: #F59AC3;
     font-size: 18px;
@@ -24,8 +23,8 @@ footer {
     padding: 20px;
     text-align: center;
     align-items: center;
-    width: 100%; /* Ocupa todo el ancho */
-    margin-top: 60px; /* Añade separación con el contenido superior */
+    width: 90%; 
+    margin-top: 60px; 
     position: relative;
     left: 0;
 }
