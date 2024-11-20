@@ -599,7 +599,15 @@ option {
         align-items: center;
         text-align: center;
     }
-    
+    form {
+
+        border-radius: 0px;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 20px;
+        width: 500px; 
+        font-size: 30px;
+    }
 }
 
 @media (max-width: 640px) {
