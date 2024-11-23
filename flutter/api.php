@@ -22,6 +22,50 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit();
 }
 
+// Si se detecta un archivo (para la actualización de foto de perfil)
+if (isset($_POST['action']) && $_POST['action'] === 'update_pfp') {
+    if (isset($_POST['email']) && isset($_FILES['file'])) {
+        $email = $_POST['email'];
+        $file = $_FILES['file'];
+
+        // Verificar si hubo errores al cargar el archivo
+        if ($file['error'] !== UPLOAD_ERR_OK) {
+            echo json_encode(["success" => false, "error" => "Error al subir el archivo"]);
+            exit();
+        }
+
+        // Establecer la ruta de destino
+        $uploadDir = __DIR__ . '/uploads/';
+        if (!is_dir($uploadDir)) {
+            mkdir($uploadDir, 0755, true);
+        }
+
+        $fileExtension = pathinfo($file['name'], PATHINFO_EXTENSION);
+        $fileName = uniqid() . '.' . $fileExtension;
+        $filePath = $uploadDir . $fileName;
+
+        // Mover el archivo a la carpeta de destino
+        if (move_uploaded_file($file['tmp_name'], $filePath)) {
+            $relativePath = '/uploads/' . $fileName;
+
+            // Actualizar la base de datos con la nueva ruta de la foto de perfil
+            $sql = "UPDATE usuarios SET pfp = :pfp WHERE correo = :email";
+            $stmt = $pdo->prepare($sql);
+            try {
+                $stmt->execute([':pfp' => $relativePath, ':email' => $email]);
+                echo json_encode(["success" => true, "message" => "Foto de perfil actualizada exitosamente", "pfp" => $relativePath]);
+            } catch (PDOException $e) {
+                echo json_encode(["success" => false, "error" => "Error al actualizar la foto de perfil: " . $e->getMessage()]);
+            }
+        } else {
+            echo json_encode(["success" => false, "error" => "Error al mover el archivo"]);
+        }
+    } else {
+        echo json_encode(["error" => "Faltan datos para actualizar la foto de perfil"]);
+    }
+    exit();
+}
+
 // Decodificar el JSON recibido
 $data = json_decode(file_get_contents("php://input"), true);
 if ($data === null) {
@@ -64,13 +108,18 @@ switch ($action) {
 
     case 'login':
         if (isset($data['correo'], $data['contrasena'])) {
-            $sql = "SELECT usuario, contrasena FROM usuarios WHERE correo = :correo";
+            $sql = "SELECT usuario, contrasena, pfp FROM usuarios WHERE correo = :correo";
             $stmt = $pdo->prepare($sql);
             $stmt->execute([':correo' => $data['correo']]);
             $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
             if ($user && password_verify($data['contrasena'], $user['contrasena'])) {
-                echo json_encode(["success" => true, "usuario" => $user['usuario'], "message" => "Inicio de sesión exitoso"]);
+                echo json_encode([
+                    "success" => true,
+                    "usuario" => $user['usuario'],
+                    "pfp" => $user['pfp'],
+                    "message" => "Inicio de sesión exitoso"
+                ]);
             } else {
                 echo json_encode(["success" => false, "error" => "Credenciales incorrectas"]);
             }
