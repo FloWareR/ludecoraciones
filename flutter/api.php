@@ -151,30 +151,73 @@ switch ($action) {
             echo json_encode(["error" => "Faltan datos para el pago"]);
         }
         break;
-
     case 'update_profile':
         if (isset($data['current_email'], $data['new_email'], $data['new_password'], $data['new_phone'], $data['new_age'], $data['new_usuario'])) {
-            $hashedPassword = password_hash($data['new_password'], PASSWORD_BCRYPT);
-            $sql = "UPDATE usuarios SET usuario = :new_usuario, correo = :new_email, contrasena = :new_password, telefono = :new_phone, edad = :new_age WHERE correo = :current_email";
-            $stmt = $pdo->prepare($sql);
-            try {
-                $stmt->execute([
+            // Check if a new profile picture is being uploaded
+            $pfpPath = null;
+        
+            if (isset($_FILES['file'])) {
+                $file = $_FILES['file'];
+    
+                // Check for errors in the file upload
+                                if ($file['error'] === UPLOAD_ERR_OK) {
+                        // Define upload directory
+                        $uploadDir = __DIR__ . '/uploads/';
+                        if (!is_dir($uploadDir)) {
+                            mkdir($uploadDir, 0755, true);
+                        }
+        
+                        // Generate a unique name for the file
+                        $fileExtension = pathinfo($file['name'], PATHINFO_EXTENSION);
+                        $fileName = uniqid() . '.' . $fileExtension;
+                        $filePath = $uploadDir . $fileName;
+        
+                        // Move the uploaded file to the directory
+                        if (move_uploaded_file($file['tmp_name'], $filePath)) {
+                            $pfpPath = '/uploads/' . $fileName;
+                        } else {
+                            echo json_encode(["success" => false, "error" => "Error al mover el archivo de foto"]);
+                            exit();
+                        }
+                    } else {
+                        echo json_encode(["success" => false, "error" => "Error en la subida del archivo"]);
+                        exit();
+                    }
+                }
+        
+                // Update the profile information in the database
+                $hashedPassword = password_hash($data['new_password'], PASSWORD_BCRYPT);
+                $sql = "UPDATE usuarios 
+                        SET usuario = :new_usuario, correo = :new_email, contrasena = :new_password, 
+                            telefono = :new_phone, edad = :new_age" . 
+                            ($pfpPath ? ", pfp = :pfp" : "") . 
+                        " WHERE correo = :current_email";
+                $stmt = $pdo->prepare($sql);
+        
+                $params = [
                     ':new_usuario' => $data['new_usuario'],
                     ':new_email' => $data['new_email'],
                     ':new_password' => $hashedPassword,
                     ':new_phone' => $data['new_phone'],
                     ':new_age' => $data['new_age'],
                     ':current_email' => $data['current_email']
-                ]);
-                echo json_encode(["success" => true, "message" => "Perfil actualizado correctamente."]);
-            } catch (PDOException $e) {
-                echo json_encode(["success" => false, "error" => "Error al actualizar el perfil: " . $e->getMessage()]);
+                ];
+        
+                if ($pfpPath) {
+                    $params[':pfp'] = $pfpPath;
+                }
+        
+                try {
+                    $stmt->execute($params);
+                    echo json_encode(["success" => true, "message" => "Perfil actualizado correctamente"]);
+                } catch (PDOException $e) {
+                    echo json_encode(["success" => false, "error" => "Error al actualizar el perfil: " . $e->getMessage()]);
+                }
+            } else {
+                echo json_encode(["error" => "Faltan datos para la actualización del perfil"]);
             }
-        } else {
-            echo json_encode(["error" => "Faltan datos para la actualización del perfil"]);
-        }
-        break;
-
+            break;
+        
     default:
         echo json_encode(["error" => "Acción no válida"]);
 }
