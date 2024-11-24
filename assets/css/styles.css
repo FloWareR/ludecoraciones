@@ -610,12 +610,12 @@ option {
     .cta-button{
         font-size: 20px;
     }
-    .service-item {
+    .container {
 
-        border-radius: 0px;
+    border-radius: 0px;
 
-    }
-    
+}
+
 }
 
 @media (max-width: 640px) {
