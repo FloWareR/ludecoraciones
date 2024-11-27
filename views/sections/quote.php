@@ -51,7 +51,7 @@ function abrirW() {
     </div>
 
     <div class="form-section">
-        <form action="/guardar_cotizacion.php" method="post" onsubmit="return enviarAWhatsApp()">
+        <form action="/submit.php" method="post" onsubmit="return enviarAWhatsApp()">
             <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" required>
 
