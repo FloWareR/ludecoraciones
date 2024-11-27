@@ -10,8 +10,7 @@
         "assets/images/img7.jpeg",
         "assets/images/img8.jpeg",
         "assets/images/img9.jpeg",
-        "assets/images/img12.jpeg",
-        "assets/images/img13.jpeg"
+
     ];
 
     function updateCarousel() {
