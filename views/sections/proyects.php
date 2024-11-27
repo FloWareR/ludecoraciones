@@ -50,10 +50,10 @@
     </div>
     <div class="card">
         <img src="/assets/images/img12.jpeg" alt="Graduacion escolar">
-        <div class="caption">Cumpleaños goku</div>
+        <div class="caption">Quinceaños</div>
     </div>    <div class="card">
         <img src="/assets/images/img13.jpeg" alt="Graduacion escolar">
-        <div class="caption">Cumpleaños goku</div>
+        <div class="caption">Fiesta de Minnie</div>
     </div>
 </div>
 
