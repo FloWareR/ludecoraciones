@@ -613,19 +613,19 @@ option {
 
     border-radius: 0px;
 
-}
+    }    
+    .header-container {
+        margin-bottom: 0px;
+    }
+    form input, form textarea {
+        margin-bottom: 2px;
+
+    }
 
 }
 
 @media (max-width: 640px) {
 
 
-    form input, form textarea {
-        margin-bottom: 2px;
 
-    }
-
-    .cta-button {
-        padding: 15px;
-    }
 }
