@@ -1,49 +1,61 @@
 <?php
 include_once(__DIR__ . '/config/config.php');
-include_once(__DIR__ . '/config/autoload.php');
+include_once(__DIR__ . '/libraries/Database.php');
 
 // Conexión a la base de datos
 $db = new Database();
 
 // Verificar si los datos fueron enviados por POST
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Obtener los datos del formulario
-    $nombre = $_POST['nombre'];
-    $direccion = $_POST['direccion'];
-    $fecha_hora = $_POST['fecha_hora'];
-    $tipo_evento = $_POST['tipo_evento'];
-    $detalles = isset($_POST['detalles']) ? $_POST['detalles'] : 'No especificado';
+    // Obtener los datos del formulario y limpiar entradas
+    $nombre = trim($_POST['nombre']);
+    $direccion = trim($_POST['direccion']);
+    $fecha_hora = trim($_POST['fecha_hora']);
+    $tipo_evento = trim($_POST['tipo_evento']);
+    $detalles = isset($_POST['detalles']) && !empty(trim($_POST['detalles'])) 
+                ? trim($_POST['detalles']) 
+                : 'No especificado';
 
-    // Guardar en la base de datos
-    $sql = "INSERT INTO cotizaciones (nombre, direccion, fecha_hora, tipo_evento, detalles) 
-            VALUES (:nombre, :direccion, :fecha_hora, :tipo_evento, :detalles)";
-    $params = [
-        ':nombre' => $nombre, 
-        ':direccion' => $direccion,
-        ':fecha_hora' => $fecha_hora,
-        ':tipo_evento' => $tipo_evento,
-        ':detalles' => $detalles,
-    ];
+    // Validar los datos mínimos requeridos
+    if (!empty($nombre) && !empty($direccion) && !empty($fecha_hora) && !empty($tipo_evento)) {
+        // Preparar la consulta SQL para insertar en la base de datos
+        $sql = "INSERT INTO cotizaciones (nombre, direccion, fecha_hora, tipo_evento, detalles) 
+                VALUES (:nombre, :direccion, :fecha_hora, :tipo_evento, :detalles)";
+        $params = [
+            ':nombre' => $nombre,
+            ':direccion' => $direccion,
+            ':fecha_hora' => $fecha_hora,
+            ':tipo_evento' => $tipo_evento,
+            ':detalles' => $detalles,
+        ];
 
-    $result = $db->InsertSql($sql, $params);
+        // Intentar insertar en la base de datos
+        $result = $db->InsertSql($sql, $params);
 
-    if ($result['success']) {
-        // Redirigir a WhatsApp
-        $telefono = '9931602365';
-        $mensaje = "Hola, me gustaría solicitar una cotización. Aquí están los detalles:
-        \nNombre: $nombre
-        \nDirección del evento: $direccion
-        \nDía y hora del evento: $fecha_hora
-        \nTipo de evento: $tipo_evento
-        \nDetalles de la decoración: $detalles";
+        if ($result['success']) {
+            // Preparar redirección a WhatsApp
+            $telefono = '9931602365';
+            $mensaje = "Hola, me gustaría solicitar una cotización. Aquí están los detalles:
+            \nNombre: $nombre
+            \nDirección del evento: $direccion
+            \nDía y hora del evento: $fecha_hora
+            \nTipo de evento: $tipo_evento
+            \nDetalles de la decoración: $detalles";
 
-        $url = "https://api.whatsapp.com/send?phone=$telefono&text=" . urlencode($mensaje);
-        header("Location: $url");
-        exit;
+            // Redirigir a WhatsApp
+            $url = "https://api.whatsapp.com/send?phone=$telefono&text=" . urlencode($mensaje);
+            header("Location: $url");
+            exit;
+        } else {
+            // Mostrar error al guardar los datos
+            echo "<p style='color: red;'>Error al guardar los datos: " . htmlspecialchars($result['error']) . "</p>";
+        }
     } else {
-        echo "Hubo un error al guardar los datos. Por favor, inténtalo de nuevo.";
+        // Mensaje de error si faltan datos
+        echo "<p style='color: red;'>Por favor, completa todos los campos requeridos.</p>";
     }
 } else {
-    echo "Método no permitido.";
+    // Mensaje si no se envió el formulario por POST
+    echo "<p style='color: red;'>Método no permitido.</p>";
 }
 ?>
