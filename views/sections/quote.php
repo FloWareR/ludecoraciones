@@ -51,15 +51,15 @@ function abrirW() {
     </div>
 
     <div class="form-section">
-        <form onsubmit="abrirW(); return false;">
+        <form action="/guardar_cotizacion.php" method="post" onsubmit="return enviarAWhatsApp()">
             <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
+                <input type="text" id="nombre" name="nombre" required>
 
             <label for="direccion">Dirección del evento:</label>
-            <input type="text" id="direccion" name="direccion" required>
+                <input type="text" id="direccion" name="direccion" required>
 
             <label for="fecha_hora">Día y hora del evento:</label>
-            <input type="datetime-local" id="fecha_hora" name="fecha_hora" required>
+                <input type="datetime-local" id="fecha_hora" name="fecha_hora" required>
 
             <label for="tipo_evento">Tipo de evento:</label>
                 <select id="tipo_evento" name="tipo_evento" required>
@@ -73,10 +73,10 @@ function abrirW() {
                 </select>
 
             <label for="detalles">Detalles de la decoración que deseas (opcional):</label>
-            <textarea id="detalles" name="detalles" rows="3"></textarea>
-
+                <textarea id="detalles" name="detalles" rows="3"></textarea>
             <input type="submit" value="Enviar por WhatsApp" class="cta-button">
         </form>
+
     </div>
 
     <?php include($_SERVER['DOCUMENT_ROOT'] . '/views/footer.php'); ?>
