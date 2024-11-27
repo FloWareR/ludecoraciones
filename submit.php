@@ -47,10 +47,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             // Generar script para abrir WhatsApp en nueva pestaña y redirigir a la página principal
             echo "
-            <script>
-                window.open('$url', '_blank'); // Abrir WhatsApp en una nueva pestaña
-                window.location.href = 'https://ludecoraciones.com/'; // Redirigir a la página principal
-            </script>";
+            <html>
+            <head>
+                <script>
+                    // Abrir WhatsApp en una nueva pestaña
+                    window.open('$url', '_blank');
+                    // Redirigir la página actual a la página principal
+                    window.location.href = 'https://ludecoraciones.com/';
+                </script>
+            </head>
+            <body></body>
+            </html>";
             exit;
         } else {
             // Mostrar error al guardar los datos
