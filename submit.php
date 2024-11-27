@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $sql = "INSERT INTO cotizaciones (nombre, direccion, fecha_hora, tipo_evento, detalles) 
             VALUES (:nombre, :direccion, :fecha_hora, :tipo_evento, :detalles)";
     $params = [
-        ':nombre' => $nombre,
+        ':nombre' => $nombre, 
         ':direccion' => $direccion,
         ':fecha_hora' => $fecha_hora,
         ':tipo_evento' => $tipo_evento,
