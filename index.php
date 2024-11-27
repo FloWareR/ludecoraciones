@@ -1,39 +1,34 @@
 <?php
 
-function printArray($data) {
-    echo '<pre>' . print_r($data, true) . '</pre>';
+function printArray($data){
+	echo '<pre'.print_r($data,true).'</pre>';
 }
 
-// Mostrar errores (solo en desarrollo)
-ini_set("display_errors", 1);
-ini_set("display_startup_errors", 1);
+	ini_set("display_errors",1);
+	ini_set("display_startup_errors",1);
+	include("config/config.php");
+	include("config/autoload.php");
 
-include("config/config.php");
-include("config/autoload.php");
+	$uri = $_SERVER["REQUEST_URI"];
+	$uri = str_replace("/landingpage",'',$uri);
+	if ($uri == "/"){
+		$uri = "";
+	}
+	$uritmp = explode("/",$uri);
+	array_shift($uritmp);
+	$uritmp = array_values($uritmp);
+	//printArray($uritmp);
+	//var_dump(empty($uritmp) or (isset($uritmp[0])and $uritmp[0] == ""));
+	if(empty($uritmp) or (isset($uritmp[0])and $uritmp[0] == "")){
+		$section = "index";
+	}else{
+		$section = $uritmp[0];
+	}
+	$filename = "views/sections/$section.php";
+	//echo $section;
+	if(file_exists($filename) and is_file($filename)){
+		include($filename);
 
-// Obtener la URI actual
-$uri = $_SERVER["REQUEST_URI"];
-$uri = trim($uri, '/'); // Eliminar slashes iniciales y finales
-
-// Separar la URI en partes
-$uritmp = explode("/", $uri);
-$uritmp = array_filter($uritmp); // Eliminar elementos vacíos
-$uritmp = array_values($uritmp); // Reindexar el array
-
-// Determinar la sección
-if (empty($uritmp)) {
-    $section = "index"; // Página por defecto
-} else {
-    $section = $uritmp[0]; // Primera parte de la URI
-}
-
-// Construir la ruta del archivo
-$filename = "views/sections/$section.php";
-
-// Verificar si el archivo existe
-if (file_exists($filename) && is_file($filename)) {
-    include($filename);
-} else {
-    include("views/sections/error404.php"); // Archivo de error 404
-}
+	}else{echo 'error';}
 ?>
+

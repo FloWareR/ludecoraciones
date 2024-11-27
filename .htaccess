@@ -1,15 +1,14 @@
-# Habilitar mod_rewrite
 RewriteEngine On
+DirectoryIndex index.php
 
-# Redirigir a HTTPS (opcional)
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
 
-# Eliminar "www." y forzar dominio limpio
-RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
-RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
 
-# Reescribir URLs limpias
+<ifModule mod_rewrite.c>
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ index.php [L]
+RewriteRule ^index/(.*)/(.*)/(.*)$ index.php?op=$1&a=$2&b=$3&rule=operaciones [NC,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^index/(.*) index.php?op=$1&rule=1 [NC,L]
+</ifModule>
