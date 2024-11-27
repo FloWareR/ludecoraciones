@@ -621,7 +621,8 @@ option {
 
 
     form input, form textarea {
-        padding: 20px;
+        margin-bottom: 0px;
+
     }
 
     .cta-button {
