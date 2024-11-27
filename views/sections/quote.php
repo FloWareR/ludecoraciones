@@ -16,32 +16,7 @@
 
   gtag('config', 'G-131FZTGBX8');
 </script>
-<script>
-function abrirW() {
-    const telefono = '9931602365';
-    
-    // Obtener los valores de los campos del formulario
-    const nombre = document.getElementById('nombre').value;
-    const direccion = document.getElementById('direccion').value;
-    const fechaHora = document.getElementById('fecha_hora').value;
-    const tipoEvento = document.getElementById('tipo_evento').value;
-    const detalles = document.getElementById('detalles').value || "No especificado";
 
-    // Construir el mensaje
-    const mensaje = `Hola, me gustaría solicitar una cotización. Aquí están los detalles:
-    \nNombre: ${nombre}
-    \nDirección del evento: ${direccion}
-    \nDía y hora del evento: ${fechaHora}
-    \nTipo de evento: ${tipoEvento}
-    \nDetalles de la decoración: ${detalles}`;
-
-    // Crear la URL de WhatsApp
-    const url = `https://api.whatsapp.com/send?phone=${telefono}&text=${encodeURIComponent(mensaje)}`;
-
-    // Abrir WhatsApp en una nueva pestaña
-    window.open(url, "_blank");
-}
-</script>
 <body>
 
     <?php include($_SERVER['DOCUMENT_ROOT'] . '/views/header.php'); ?>
