@@ -619,6 +619,7 @@ option {
     }
     form input, form textarea {
         margin-bottom: 2px;
+        padding: 10px;
 
     }
 
