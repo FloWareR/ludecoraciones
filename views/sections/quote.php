@@ -8,14 +8,7 @@
     <link rel="stylesheet" href="../../assets/css/styles.css"> 
 </head>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-131FZTGBX8"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-131FZTGBX8');
-</script>
 <script>
 function abrirW() {
     const telefono = '9931602365';
