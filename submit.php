@@ -42,22 +42,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             \nTipo de evento: $tipo_evento
             \nDetalles de la decoración: $detalles";
 
-            // Generar la URL de WhatsApp
+            // Redirigir a WhatsApp
             $url = "https://api.whatsapp.com/send?phone=$telefono&text=" . urlencode($mensaje);
-
-            // Generar script para abrir WhatsApp en nueva pestaña y redirigir a la página principal
-            echo "
-            <html>
-            <head>
-                <script>
-                    // Abrir WhatsApp en una nueva pestaña
-                    window.open('$url', '_blank');
-                    // Redirigir la página actual a la página principal
-                    window.location.href = 'https://ludecoraciones.com/';
-                </script>
-            </head>
-            <body></body>
-            </html>";
+            header("Location: $url");
             exit;
         } else {
             // Mostrar error al guardar los datos
