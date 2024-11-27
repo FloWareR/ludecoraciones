@@ -1,15 +1,15 @@
+# Habilitar mod_rewrite
 RewriteEngine On
-DirectoryIndex index.php
 
+# Redirigir a HTTPS (opcional, si deseas usar siempre HTTPS)
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
 
+# Eliminar "www." y forzar "ludecoraciones.com" (opcional)
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
 
-<ifModule mod_rewrite.c>
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}\.php -f
-RewriteRule ^(.*)$ $1.php [L]
-
+# Reescribir URLs limpias para que no se muestren las rutas internas
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^index/(.*) index.php?op=$1&rule=1 [NC,L]
-
-</ifModule>
+RewriteRule ^(.*)$ index.php [L]
