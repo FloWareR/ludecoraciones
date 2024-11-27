@@ -7,7 +7,6 @@
     <link rel="icon" href="/assets/images/logo.png" type="image/png">
 
     <link rel="stylesheet" href="assets/css/styles.css"> 
-</head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-131FZTGBX8"></script>
 <script>
@@ -17,6 +16,8 @@
 
   gtag('config', 'G-131FZTGBX8');
 </script>
+</head>
+
 <body>
 
 <?php
