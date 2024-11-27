@@ -6,9 +6,7 @@ function toggleDrawer() {
 </script>
 <div class="navbar">
     <div class="logo">
-        <a href="https://ludecoraciones.com/">
-            <img src="/assets/images/logo.png" alt="Logo">
-        </a>
+        <img src="/assets/images/logo.png" alt="Logo">
     </div>
     <button class="hamburger-btn" onclick="toggleDrawer()">
         <img src="/assets/images/Menu.png" alt="Menu">
