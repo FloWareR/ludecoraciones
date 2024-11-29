@@ -673,9 +673,13 @@ option {
     }
 
     form {
-        width: 100%; 
-        padding: 15px;
         border-radius: 0px;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 20px;
+        width: 100%; 
+        font-size: 30px;
+        font-size: 20px;
     }
 
     .cta-button {
