@@ -553,82 +553,182 @@ option {
 
 
 
-@media (max-width: 736px) {
+@media (min-width: 1920px) {
+    body {
+        font-size: 20px; /* Ajustar el tamaño de la fuente */
+    }
+
+    .navbar {
+        padding: 20px 30px; /* Más espacio para pantallas grandes */
+    }
+
+    .logo img {
+        max-width: 150px; /* Logo más grande */
+    }
+
+    .desktop-links a {
+        font-size: 24px; /* Aumentar tamaño del texto en el menú */
+    }
+
+    .hero-form-container {
+        gap: 50px; /* Más espacio entre elementos */
+    }
+
+    form {
+        width: 600px; /* Formularios más grandes */
+        font-size: 22px; /* Texto más grande */
+    }
+}
+
+/* Media Query for 1366x768 (HD Ready) */
+@media (max-width: 1366px) and (min-width: 1025px) {
+    body {
+        font-size: 18px; /* Tamaño de texto estándar */
+    }
+
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .logo img {
+        max-width: 120px;
+    }
+
+    .desktop-links a {
+        font-size: 20px;
+    }
+
+    .hero-form-container {
+        gap: 40px;
+    }
+
+    form {
+        width: 500px;
+        font-size: 18px;
+    }
+
+    .footer p {
+        font-size: 16px; /* Texto más pequeño para adaptarse */
+    }
+}
+
+/* Media Query for 1024x768 (Tablets, iPads) */
+@media (max-width: 1024px) and (min-width: 737px) {
+    body {
+        font-size: 16px;
+    }
+
+    .navbar {
+        padding: 10px 15px;
+    }
+
+    .logo img {
+        max-width: 100px;
+    }
+
     .desktop-links {
-        display: none;
+        display: none; /* Ocultar menú de escritorio */
     }
 
     .hamburger-btn {
-        display: block;
+        display: block; /* Mostrar botón hamburguesa */
     }
 
-    .drawer-nav {
-        right: -100%;
+    .hero-form-container {
+        flex-direction: column; /* Apilar los elementos verticalmente */
+        gap: 20px;
     }
 
-    .drawer-nav.open {
-        right: 0;
-    }
-    .service-item img{
-        width: 100%;
-
-    }
-    #about {
-        display: flex;
-        flex-direction: column;}
-
-
-    #about img {
-        width: 100%;
-        margin-left: 5px;
-        border-radius: 8px;
-    }
-    #about h2 {
-        font-family: 'Itim', serif;
-        color: #4b4b4b;
-        font-size: 26px;
-        margin-top: 0;
-        margin-bottom: 20px;
-    }
-    
-    #about p {
+    form {
+        width: 100%; /* Ajustar el formulario al ancho del contenedor */
+        padding: 20px;
         font-size: 16px;
-        line-height: 1.6;
-        color: #666;
-        max-width: 100%;
-        text-align: justify
     }
+
     footer {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Apilar elementos del footer */
         text-align: center;
     }
+}
+
+/* Media Query for 420x736 (iPhones Plus, Pequeñas Pantallas) */
+@media (max-width: 736px) and (min-width: 381px) {
+    body {
+        font-size: 14px;
+    }
+
+    .navbar {
+        padding: 10px;
+    }
+
+    .logo img {
+        max-width: 80px;
+    }
+
+    .hero-form-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
     form {
-
-        border-radius: 0px;
-        padding-left: 40px;
-        padding-right: 40px;
-        padding-top: 10px;
-         
+        width: 100%; /* Formulario ocupa todo el ancho */
+        padding: 15px;
     }
-        
-        
-    
-    .cta-button{
-        font-size: 20px;
-        margin-bottom: 10px;
+
+    .cta-button {
+        font-size: 16px; /* Reducir tamaño del botón */
     }
-    .container {
 
-    border-radius: 0px;
-
-    }    
-    .header-container {
-        margin-bottom: 0px;
+    footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
     }
-    form input, form textarea {
-        margin-bottom: 2px;
-        padding: 5px;
 
+    .social-icon {
+        width: 30px;
+        height: 30px; /* Íconos más pequeños */
+    }
+}
+
+/* Media Query for 380x640 (iPhone SE, Pantallas Muy Pequeñas) */
+@media (max-width: 380px) {
+    body {
+        font-size: 12px; /* Texto más pequeño */
+    }
+
+    .navbar {
+        padding: 8px;
+    }
+
+    .logo img {
+        max-width: 60px; /* Logo más pequeño */
+    }
+
+    .hero-form-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    form {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px; /* Reducir tamaño del texto */
+    }
+
+    .cta-button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .social-icon {
+        width: 25px;
+        height: 25px; /* Íconos más pequeños */
     }
 }
