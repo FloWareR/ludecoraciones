@@ -483,8 +483,8 @@ option {
 }
 
 .service-item {
-    flex: 1 1 300px; /* Ajusta el tamaño mínimo */
-    max-width: 350px; /* Ajusta el tamaño máximo */
+    flex: 1 1 300px; 
+    max-width: 350px; 
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -513,7 +513,6 @@ option {
     line-height: 1.6;
 }
 
-/* Efecto hover en los elementos de servicio */
 .service-item:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -527,12 +526,12 @@ option {
 
 .service-cards a {
     text-decoration: none;
-    color: inherit; /* Mantener el color del texto */
+    color: inherit;
     display: block;
 }
 
 .service-item {
-    cursor: pointer; /* Cambiar el cursor a mano al pasar por la tarjeta */
+    cursor: pointer; 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -555,35 +554,34 @@ option {
 
 @media (min-width: 1920px) {
     body {
-        font-size: 20px; /* Ajustar el tamaño de la fuente */
+        font-size: 20px; 
     }
 
     .navbar {
-        padding: 20px 30px; /* Más espacio para pantallas grandes */
+        padding: 20px 30px; 
     }
 
     .logo img {
-        max-width: 150px; /* Logo más grande */
+        max-width: 150px; 
     }
 
     .desktop-links a {
-        font-size: 24px; /* Aumentar tamaño del texto en el menú */
+        font-size: 24px; 
     }
 
     .hero-form-container {
-        gap: 50px; /* Más espacio entre elementos */
+        gap: 50px; 
     }
 
     form {
-        width: 600px; /* Formularios más grandes */
-        font-size: 22px; /* Texto más grande */
+        width: 600px; 
+        font-size: 22px; 
     }
 }
 
-/* Media Query for 1366x768 (HD Ready) */
 @media (max-width: 1366px) and (min-width: 1025px) {
     body {
-        font-size: 18px; /* Tamaño de texto estándar */
+        font-size: 18px; 
     }
 
     .navbar {
@@ -608,11 +606,10 @@ option {
     }
 
     .footer p {
-        font-size: 16px; /* Texto más pequeño para adaptarse */
+        font-size: 16px; 
     }
 }
 
-/* Media Query for 1024x768 (Tablets, iPads) */
 @media (max-width: 1024px) and (min-width: 737px) {
     body {
         font-size: 16px;
@@ -627,31 +624,30 @@ option {
     }
 
     .desktop-links {
-        display: none; /* Ocultar menú de escritorio */
+        display: none; 
     }
 
     .hamburger-btn {
-        display: block; /* Mostrar botón hamburguesa */
+        display: block; 
     }
 
     .hero-form-container {
-        flex-direction: column; /* Apilar los elementos verticalmente */
+        flex-direction: column; 
         gap: 20px;
     }
 
     form {
-        width: 100%; /* Ajustar el formulario al ancho del contenedor */
+        width: 100%; 
         padding: 20px;
         font-size: 16px;
     }
 
     footer {
-        flex-direction: column; /* Apilar elementos del footer */
+        flex-direction: column;
         text-align: center;
     }
 }
 
-/* Media Query for 420x736 (iPhones Plus, Pequeñas Pantallas) */
 @media (max-width: 736px) and (min-width: 381px) {
     body {
         font-size: 14px;
@@ -687,14 +683,25 @@ option {
 
     .social-icon {
         width: 30px;
-        height: 30px; /* Íconos más pequeños */
+        height: 30px; 
+    }
+    .desktop-links {
+        display: none; 
+    }
+
+    .hamburger-btn {
+        display: block; 
+    }
+
+    .hero-form-container {
+        flex-direction: column;
+        gap: 20px;
     }
 }
 
-/* Media Query for 380x640 (iPhone SE, Pantallas Muy Pequeñas) */
 @media (max-width: 380px) {
     body {
-        font-size: 12px; /* Texto más pequeño */
+        font-size: 12px; 
     }
 
     .navbar {
@@ -702,7 +709,7 @@ option {
     }
 
     .logo img {
-        max-width: 60px; /* Logo más pequeño */
+        max-width: 60px; 
     }
 
     .hero-form-container {
@@ -713,7 +720,7 @@ option {
     form {
         width: 100%;
         padding: 10px;
-        font-size: 14px; /* Reducir tamaño del texto */
+        font-size: 14px; 
     }
 
     .cta-button {
@@ -729,6 +736,18 @@ option {
 
     .social-icon {
         width: 25px;
-        height: 25px; /* Íconos más pequeños */
+        height: 25px; 
+    }
+    .desktop-links {
+        display: none; 
+    }
+
+    .hamburger-btn {
+        display: block; 
+    }
+
+    .hero-form-container {
+        flex-direction: column; 
+        gap: 20px;
     }
 }
