@@ -577,6 +577,9 @@ option {
         width: 600px; 
         font-size: 22px; 
     }
+    .container{
+        font-size: 20px;
+    }
 }
 
 @media (max-width: 1366px) and (min-width: 1025px) {
@@ -670,12 +673,13 @@ option {
     }
 
     form {
-        width: 100%; /* Formulario ocupa todo el ancho */
+        width: 100%; 
         padding: 15px;
+        border-radius: 0px;
     }
 
     .cta-button {
-        font-size: 16px; /* Reducir tamaño del botón */
+        font-size: 16px; 
     }
 
     footer {
@@ -703,6 +707,11 @@ option {
     .container{
         border-radius: 0px;
     }
+    #about{
+        flex-direction: column;
+        align-items: center;
+
+    }
 }
 
 @media (max-width: 380px) {
@@ -727,6 +736,8 @@ option {
         width: 100%;
         padding: 10px;
         font-size: 14px; 
+        border-radius: 0px;
+
     }
 
     .cta-button {
@@ -758,5 +769,10 @@ option {
     }
     .container{
         border-radius: 0px;
+    }
+    #about{
+        flex-direction: column;
+        align-items: center;
+
     }
 }
