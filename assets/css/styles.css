@@ -473,7 +473,6 @@ option {
     font-size: 20px;
 
 }
-/* Estilos para la sección de servicios */
 .service-cards {
     display: flex;
     flex-wrap: wrap;
@@ -652,6 +651,11 @@ option {
         align-items: center;
 
     }
+    .gallery{
+        max-width: 90%;
+        align-items: center;
+
+    }
 }
 
 @media (max-width: 736px) and (min-width: 381px) {
@@ -718,6 +722,11 @@ option {
         align-items: center;
 
     }
+    .gallery{
+        max-width: 90%;
+        align-items: center;
+
+    }
 }
 
 @media (max-width: 380px) {
@@ -780,6 +789,11 @@ option {
     }
     #about{
         flex-direction: column;
+        align-items: center;
+
+    }
+    .gallery{
+        max-width: 90%;
         align-items: center;
 
     }
