@@ -646,6 +646,9 @@ option {
         flex-direction: column;
         text-align: center;
     }
+    .container{
+        border-radius: 0px;
+    }
 }
 
 @media (max-width: 736px) and (min-width: 381px) {
@@ -696,6 +699,9 @@ option {
     .hero-form-container {
         flex-direction: column;
         gap: 20px;
+    }
+    .container{
+        border-radius: 0px;
     }
 }
 
@@ -749,5 +755,8 @@ option {
     .hero-form-container {
         flex-direction: column; 
         gap: 20px;
+    }
+    .container{
+        border-radius: 0px;
     }
 }
